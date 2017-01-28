@@ -1,0 +1,19 @@
+<PresetXMLTree version="2">
+	<Preset Name="ev_Fred" GenericType="SLCH">
+		<PresetHeader>
+			<PluginName>SSLChannel</PluginName>
+			<PluginVersion>9.3.40</PluginVersion>
+			<ReadOnly>false</ReadOnly>
+		</PresetHeader>
+		<MessageToShell/>
+		<PresetData Setup="CURRENT">
+			<Parameters Type="RealWorld">-12.099999999999999645 2.2999999999999998224 1 0.10000000000000000555 * -30 15.199999999999999289 1 1 0.10000000000000000555
+* 0 0 0 0 50 0 0.5 2.5
+-5.2999999999999998224 1.4699999999999999734 1.75 0 0 8 0 0 130
+30 0 7 1 * * 0 * *
+7 -18 0 0 * * * * *
+* -18 -18 -18 -18 -18 -18 -18 -18
+0 0 </Parameters>
+		</PresetData>
+	</Preset>
+</PresetXMLTree>

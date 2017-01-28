@@ -1,0 +1,1959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session version="3002" end-is-free="no" id-counter="34920" name-counter="1" event-counter="13036" vca-counter="1">
+  <ProgramVersion created-with="Ardour 5.4" modified-with="Ardour 5.4"/>
+  <MIDIPorts>
+    <Port name="MIDI Clock in" direction="input"/>
+    <Port name="MIDI Clock out" direction="output"/>
+    <Port name="MIDI control in" direction="input"/>
+    <Port name="MIDI control out" direction="output"/>
+    <Port name="MMC in" direction="input"/>
+    <Port name="MMC out" direction="output"/>
+    <Port name="MTC in" direction="input"/>
+    <Port name="MTC out" direction="output"/>
+    <Port name="Scene in" direction="input"/>
+    <Port name="Scene out" direction="output"/>
+  </MIDIPorts>
+  <Config>
+    <Option name="destructive-xfade-msecs" value="2"/>
+    <Option name="use-region-fades" value="1"/>
+    <Option name="use-transport-fades" value="1"/>
+    <Option name="use-monitor-fades" value="1"/>
+    <Option name="native-file-data-format" value="0"/>
+    <Option name="native-file-header-format" value="1"/>
+    <Option name="auto-play" value="0"/>
+    <Option name="auto-return" value="0"/>
+    <Option name="auto-input" value="1"/>
+    <Option name="punch-in" value="0"/>
+    <Option name="punch-out" value="0"/>
+    <Option name="subframes-per-frame" value="100"/>
+    <Option name="timecode-format" value="8"/>
+    <Option name="track-name-number" value="0"/>
+    <Option name="track-name-take" value="0"/>
+    <Option name="take-name" value="Take1"/>
+    <Option name="jack-time-master" value="1"/>
+    <Option name="use-video-sync" value="0"/>
+    <Option name="video-pullup" value="0"/>
+    <Option name="external-sync" value="0"/>
+    <Option name="insert-merge-policy" value="1"/>
+    <Option name="timecode-offset" value="0"/>
+    <Option name="timecode-offset-negative" value="1"/>
+    <Option name="slave-timecode-offset" value=" 00:00:00:00"/>
+    <Option name="timecode-generator-offset" value=" 00:00:00:00"/>
+    <Option name="glue-new-markers-to-bars-and-beats" value="0"/>
+    <Option name="midi-copy-is-fork" value="0"/>
+    <Option name="glue-new-regions-to-bars-and-beats" value="0"/>
+    <Option name="realtime-export" value="0"/>
+    <Option name="use-video-file-fps" value="0"/>
+    <Option name="videotimeline-pullup" value="1"/>
+    <Option name="wave-amplitude-zoom" value="0"/>
+    <Option name="wave-zoom-factor" value="2"/>
+    <Option name="show-summary" value="1"/>
+    <Option name="show-group-tabs" value="1"/>
+    <Option name="show-region-fades" value="1"/>
+    <Option name="show-busses-on-meterbridge" value="0"/>
+    <Option name="show-master-on-meterbridge" value="1"/>
+    <Option name="show-midi-on-meterbridge" value="1"/>
+    <Option name="show-rec-on-meterbridge" value="1"/>
+    <Option name="show-mute-on-meterbridge" value="0"/>
+    <Option name="show-solo-on-meterbridge" value="0"/>
+    <Option name="show-monitor-on-meterbridge" value="0"/>
+    <Option name="show-name-on-meterbridge" value="1"/>
+    <Option name="meterbridge-label-height" value="0"/>
+  </Config>
+  <Metadata/>
+  <Sources/>
+  <Regions/>
+  <Locations>
+    <Location id="34921" name="session" start="0" end="0" flags="IsSessionRange" locked="no" position-lock-style="AudioTime"/>
+  </Locations>
+  <Bundles/>
+  <VCAManager/>
+  <Routes>
+    <Route id="23929" name="Monitor" default-type="audio" strict-io="0" active="yes" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak">
+      <PresentationInfo order="0" flags="MonitorOut" color="0"/>
+      <Controllable name="solo" id="23937" flags="Toggle,RealTime" value="0.000000000000" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="23943" flags="Toggle,RealTime" value="0.000000000000" solo-isolated="no"/>
+      <Controllable name="solo-safe" id="23945" flags="Toggle" value="0.000000000000" solo-safe="no"/>
+      <IO name="Monitor" id="23946" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Monitor/audio_in 1">
+          <Connection other="Master/audio_out 1"/>
+          <Connection other="auditioner/audio_out 1"/>
+        </Port>
+        <Port type="audio" name="Monitor/audio_in 2">
+          <Connection other="Master/audio_out 2"/>
+          <Connection other="auditioner/audio_out 2"/>
+        </Port>
+      </IO>
+      <IO name="Monitor" id="23947" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Monitor/audio_out 1">
+          <Connection other="system:playback_1"/>
+        </Port>
+        <Port type="audio" name="Monitor/audio_out 2">
+          <Connection other="system:playback_2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23939" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="phase" id="23941" flags="Toggle" value="0.000000000000" phase-invert="00"/>
+      <Processor id="23952" name="return 2" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="1"/>
+      <Processor id="23957" name="MonitorOut" active="yes" user-latency="0" type="monitor" dim-level="0.251188635826" solo-boost-level="1" cut-all="no" dim-all="no" mono="no" channels="2">
+        <Channel id="0" cut="no" invert="no" dim="no" solo="no"/>
+        <Channel id="1" cut="no" invert="no" dim="no" solo="no"/>
+      </Processor>
+      <Processor id="23948" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="23933" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="23950" name="meter-Monitor" active="yes" user-latency="0" type="meter"/>
+      <Processor id="23951" name="Monitor" active="yes" user-latency="0" own-input="yes" own-output="no" output="Monitor" type="main-outs" role="Main"/>
+      <Slavable/>
+    </Route>
+    <Route id="24378" name="music" default-type="audio" strict-io="1" active="yes" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterKrms" saved-meter-point="MeterPostFader" mode="Normal">
+      <PresentationInfo order="0" flags="AudioTrack,OrderSet" color="3806713343"/>
+      <Controllable name="solo" id="24386" flags="Toggle,RealTime" value="0.000000000000" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="24392" flags="Toggle,RealTime" value="0.000000000000" solo-isolated="no"/>
+      <Controllable name="solo-safe" id="24394" flags="Toggle" value="0.000000000000" solo-safe="no"/>
+      <IO name="music" id="24406" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="music/audio_in 1"/>
+        <Port type="audio" name="music/audio_in 2"/>
+      </IO>
+      <IO name="music" id="24407" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="music/audio_out 1">
+          <Connection other="Master/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="music/audio_out 2">
+          <Connection other="Master/audio_in 2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="24388" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="phase" id="24390" flags="Toggle" value="0.000000000000" phase-invert="00"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="24397" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="24401" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="24399" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="24403" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="24405" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="24409" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="24384" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="24408" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="24382" flags="GainLike" value="1.000247955322"/>
+      </Processor>
+      <Processor id="32783" name="a-Amplifier" active="yes" user-latency="0" type="luaproc" unique-id="1a4364e9bd9ac6d9fa91211b3ec514f641eca283" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <luaproc last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <script lua="Lua 5.3">YXJkb3VyIHsKCVsidHlwZSJdICAgID0gImRzcCIsCgluYW1lICAgICAgICA9ICJhLUFtcGxpZmllciIsCgljYXRlZ29yeSAgICA9ICJBbXBsaWZpZXIiLAoJbGljZW5zZSAgICAgPSAiTUlUIiwKCWF1dGhvciAgICAgID0gIkFyZG91ciBUZWFtIiwKCWRlc2NyaXB0aW9uID0gW1tWZXJzYXRpbGUgKy8tIDIwZEIgbXVsdGljaGFubmVsIGFtcGxpZmllcl1dCn0KCmZ1bmN0aW9uIGRzcF9pb2NvbmZpZyAoKQoJcmV0dXJuCgl7CgkJLS0gLTEsIC0xID0gYW55IG51bWJlciBvZiBjaGFubmVscyBhcyBsb25nIGFzIGlucHV0IGFuZCBvdXRwdXQgY291bnQgbWF0Y2hlcwoJCXsgYXVkaW9faW4gPSAtMSwgYXVkaW9fb3V0ID0gLTF9LAoJfQplbmQKCgpmdW5jdGlvbiBkc3BfcGFyYW1zICgpCglyZXR1cm4KCXsKCQl7IFsidHlwZSJdID0gImlucHV0IiwgbmFtZSA9ICJHYWluIiwgbWluID0gLTIwLCBtYXggPSAyMCwgZGVmYXVsdCA9IDAsIHVuaXQ9ImRCIn0sCgl9CmVuZAoKbG9jYWwgbHBmID0gMC4wMiAtLSBwYXJhbWV0ZXIgbG93LXBhc3MgZmlsdGVyIHRpbWUtY29uc3RhbnQKbG9jYWwgY3VyX2dhaW4gPSAwIC0tIGN1cnJlbnQgc21vb3RoZWQgZ2FpbiAoZEIpCgotLSBjYWxsZWQgb25jZSB3aGVuIHBsdWdpbiBpcyBpbnN0YW50aWF0ZWQKZnVuY3Rpb24gZHNwX2luaXQgKHJhdGUpCglscGYgPSA3ODAgLyByYXRlIC0tIGludGVycG9sYXRpb24gdGltZSBjb25zdGFudAplbmQKCmZ1bmN0aW9uIGxvd19wYXNzX2ZpbHRlcl9wYXJhbSAob2xkLCBuZXcsIGxpbWl0KQoJaWYgbWF0aC5hYnMgKG9sZCAtIG5ldykgPCBsaW1pdCAgdGhlbgoJCXJldHVybiBuZXcKCWVsc2UKCQlyZXR1cm4gb2xkICsgbHBmICogKG5ldyAtIG9sZCkKCWVuZAplbmQKCi0tIHRoZSBEU1AgY2FsbGJhY2sgZnVuY3Rpb24KLS0gImlucyIgYW5kICJvdXRzIiBhcmUgaHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNDOkZsb2F0QXJyYXkKZnVuY3Rpb24gZHNwX3J1biAoaW5zLCBvdXRzLCBuX3NhbXBsZXMpCglsb2NhbCBjdHJsID0gQ3RybFBvcnRzOmFycmF5KCkgLS0gZ2V0IGNvbnRyb2wgcG9ydCBhcnJheSAocmVhZC93cml0ZSkKCWxvY2FsIHNpeiA9IG5fc2FtcGxlcyAtLSBzYW1wbGVzIHJlbWFpbmluZyB0byBwcm9jZXNzCglsb2NhbCBvZmYgPSAwIC0tIGFscmVhZHkgcHJvY2Vzc2VkIHNhbXBsZXMKCWxvY2FsIGNoYW5nZWQgPSBmYWxzZQoKCS0tIGlmIHRoZSBnYWluIHBhcmFtZXRlciB3YXMgY2hhbmdlZCwgcHJvY2VzcyBhdCBtb3N0IDMyIHNhbXBsZXMgYXQgYSB0aW1lCgktLSBhbmQgaW50ZXJwb2xhdGUgZ2FpbiB1bnRpbCB0aGUgY3VycmVudCBzZXR0aW5ncyBtYXRjaCB0aGUgdGFyZ2V0IHZhbHVlcwoJaWYgY3VyX2dhaW4gfj0gY3RybFsxXSB0aGVuCgkJY2hhbmdlZCA9IHRydWUKCQlzaXogPSAzMgoJZW5kCgoJd2hpbGUgbl9zYW1wbGVzID4gMCBkbwoJCWlmIHNpeiA+IG5fc2FtcGxlcyB0aGVuIHNpeiA9IG5fc2FtcGxlcyBlbmQgLS0gcHJvY2VzcyBhdCBtb3N0ICJyZW1haW5pbmcgc2FtcGxlcyIKCQlpZiBjaGFuZ2VkIHRoZW4KCQkJLS0gc21vb3RoIGdhaW4gY2hhbmdlcyBhYm92ZSAwLjAyIGRCIGRpZmZlcmVuY2UKCQkJY3VyX2dhaW4gPSBsb3dfcGFzc19maWx0ZXJfcGFyYW0gKGN1cl9nYWluLCBjdHJsWzFdLCAwLjAyKQoJCWVuZAoKCQlsb2NhbCBnYWluID0gQVJET1VSLkRTUC5kQl90b19jb2VmZmljaWVudCAoY3VyX2dhaW4pIC0tIDEwIF4gKDAuMDUgKiBjdXJfZ2FpbikKCgkJZm9yIGMgPSAxLCNpbnMgZG8gLS0gcHJvY2VzcyBhbGwgY2hhbm5lbHMKCQkJLS0gY2hlY2sgaWYgb3V0cHV0IGFuZCBpbnB1dCBidWZmZXJzIGZvciB0aGlzIGNoYW5uZWwgYXJlIGlkZW50aWNhbAoJCQktLSBodHRwOi8vbWFudWFsLmFyZG91ci5vcmcvbHVhLXNjcmlwdGluZy9jbGFzc19yZWZlcmVuY2UvI0M6RmxvYXRBcnJheQoJCQlpZiBub3QgaW5zW2NdOnNhbWVpbnN0YW5jZSAob3V0c1tjXSkgdGhlbgoJCQkJLS0gaHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNBUkRPVVI6RFNQCgkJCQlBUkRPVVIuRFNQLmNvcHlfdmVjdG9yIChvdXRzW2NdOm9mZnNldCAob2ZmKSwgaW5zW2NdOm9mZnNldCAob2ZmKSwgc2l6KQoJCQllbmQKCQkJQVJET1VSLkRTUC5hcHBseV9nYWluX3RvX2J1ZmZlciAob3V0c1tjXTpvZmZzZXQgKG9mZiksIHNpeiwgZ2Fpbik7IC0tIGFwcGx5LWdhaW4sIHByb2Nlc3MgaW4tcGxhY2UKCQllbmQKCQluX3NhbXBsZXMgPSBuX3NhbXBsZXMgLSBzaXoKCQlvZmYgPSBvZmYgKyBzaXoKCWVuZAoKLS1bWwoJaWYgY2hhbmdlZCB0aGVuCgkJc2VsZjpxdWV1ZV9kcmF3ICgpIC0tIG5vdGlmeSBkaXNwbGF5CgllbmQKLS1dXQplbmQKCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KLS0tIGlubGluZSBkaXNwbGF5ICsgdGV4dCBleGFtcGxlCgotLVtbCmxvY2FsIHR4dCA9IG5pbCAtLSBjYWNoZSBwYW5nbyBjb250ZXh0IGdsb2JhbGx5CgpmdW5jdGlvbiByZW5kZXJfaW5saW5lIChjdHgsIHcsIG1heF9oKQoJbG9jYWwgY3RybCA9IEN0cmxQb3J0czphcnJheSAoKSAtLSBnZXQgY29udHJvbCBwb3J0cwoKCWlmIG5vdCB0eHQgdGhlbgoJCS0tIGFsbG9jYXRlIFBhbmdvTGF5b3V0IGFuZCBzZXQgZm9udAoJCS0taHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNDYWlybzpQYW5nb0xheW91dAoJCXR4dCA9IENhaXJvLlBhbmdvTGF5b3V0IChjdHgsICJNb25vIDhweCIpCgllbmQKCgl0eHQ6c2V0X3RleHQgKHN0cmluZy5mb3JtYXQgKCIlKy4yZiBkQiIsIGN0cmxbMV0pKTsKCXR3LCB0aCA9IHR4dDpnZXRfcGl4ZWxfc2l6ZSAoKQoKCWxvY2FsIGggPSB0aCArIDQgLS0gdXNlIHRleHQtaGVpZ2h0IHdpdGggNHB4IHBhZGRpbmcKCWlmIChoID4gbWF4X2gpIHRoZW4gaCA9IG1heF9oIGVuZCAtLSBidXQgYXQgbW9zdCBtYXgtaGVpZ2h0CgoJLS0gY2xlYXIgYmFja2dyb3VuZAoJY3R4OnJlY3RhbmdsZSAoMCwgMCwgdywgaCkKCWN0eDpzZXRfc291cmNlX3JnYmEgKC4yLCAuMiwgLjIsIDEuMCkKCWN0eDpmaWxsICgpCgoJLS0gY2VudGVyIHRleHQKCWN0eDpzZXRfc291cmNlX3JnYmEgKC44LCAuOCwgLjgsIDEuMCkKCWN0eDptb3ZlX3RvICguNSAqICh3IC0gdHcpLCAuNSAqIChoIC0gdGgpKQoJdHh0OnNob3dfaW5fY2Fpcm9fY29udGV4dCAoY3R4KQoKCXJldHVybiB7dywgaH0KZW5kCi0tXV0K</script>
+          <Port id="0" value="-2.474224"/>
+        </luaproc>
+        <Controllable name="Gain" id="32785" flags="" value="-2.474224090576" parameter="0"/>
+      </Processor>
+      <Processor id="24410" name="meter-Audio  1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="24411" name="music" active="yes" user-latency="0" own-input="yes" own-output="no" output="music" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="24397" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="24401" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="24399" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="24403" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="24405" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Slavable/>
+      <Controllable name="monitoring" id="24418" flags="RealTime" value="0.000000000000" monitoring=""/>
+      <Controllable name="recsafe" id="24416" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="recenable" id="24414" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="musicThemeNoDrums_r1_session_music 1" name="musicThemeNoDrums_r1_session_music 1" id="24419" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="2"/>
+    </Route>
+    <Route id="23893" name="Master" default-type="audio" strict-io="0" active="yes" denormal-protection="no" meter-point="MeterCustom" meter-type="MeterKrms" processor-after-last-custom-meter="32999">
+      <PresentationInfo order="0" flags="MasterOut,OrderSet" color="3631408639"/>
+      <Controllable name="solo" id="23901" flags="Toggle,RealTime" value="0.000000000000" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="23907" flags="Toggle,RealTime" value="0.000000000000" solo-isolated="no"/>
+      <Controllable name="solo-safe" id="23909" flags="Toggle" value="0.000000000000" solo-safe="no"/>
+      <IO name="Master" id="23921" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Master/audio_in 1">
+          <Connection other="music/audio_out 1"/>
+          <Connection other="voice bus/audio_out 1"/>
+        </Port>
+        <Port type="audio" name="Master/audio_in 2">
+          <Connection other="music/audio_out 2"/>
+          <Connection other="voice bus/audio_out 2"/>
+        </Port>
+      </IO>
+      <IO name="Master" id="23922" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Master/audio_out 1">
+          <Connection other="Monitor/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="Master/audio_out 2">
+          <Connection other="Monitor/audio_in 2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23903" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="phase" id="23905" flags="Toggle" value="0.000000000000" phase-invert="00"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="23912" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="23916" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="23914" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="23918" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="23920" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="23924" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="23899" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="23923" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="23897" flags="GainLike" value="1.028999686241"/>
+      </Processor>
+      <Processor id="27872" name="C4 (s)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1145393491-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAAFewAAAAQAAAABREVRU3NldEEAAAVbWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9Ik11bHRpIEVsZWN0cm8gTWFzdGVyaW5nIiBH
+	ZW5lcmljVHlwZT0iUk1CQyI+CgkJPFByZXNldEhlYWRlcj4KCQkJPFBsdWdpbk5hbWU+
+	QzQ8L1BsdWdpbk5hbWU+CgkJCTxQbHVnaW5WZXJzaW9uPjkuMy4wPC9QbHVnaW5WZXJz
+	aW9uPgoJCQk8QWN0aXZlU2V0dXA+U0VUVVBfQTwvQWN0aXZlU2V0dXA+CgkJCTxSZWFk
+	T25seT50cnVlPC9SZWFkT25seT4KCQk8L1ByZXNldEhlYWRlcj4KCQk8TWVzc2FnZVRv
+	U2hlbGwvPgoJCTxQcmVzZXREYXRhIFNldHVwPSJTRVRVUF9BIiBTZXR1cE5hbWU9Ik11
+	bHRpIEVsZWN0cm8gTWFzdGVyaW5nIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdv
+	cmxkIj45MCA0OTMyIDExMDcxIDAuNTk5OTk5OTk5OTk5OTk5OTc3OCAwIDAgMCAwICog
+	KgoqICogKiAqIDAgMCAwIDAgMi4zOTk5OTk5OTk5OTk5OTk5MTEyCi0yNC4zMDAwMDAw
+	MDAwMDAwMDA3MTEgLTExIDAuNzUgMjAgNTAuMjI5OTk5OTk5OTk5OTk2ODc0IDAgMCAq
+	IC0xNDQKMCAwIDAgMCAyLjM5OTk5OTk5OTk5OTk5OTkxMTIgLTE2LjEwMDAwMDAwMDAw
+	MDAwMTQyMSAtMTEgMC43NSAxMC4wMTk5OTk5OTk5OTk5OTk1NzQKNTAuMjI5OTk5OTk5
+	OTk5OTk2ODc0IDAgMCAqIC0xNDQgMCAwIDAgMAoyLjM5OTk5OTk5OTk5OTk5OTkxMTIg
+	LTI3LjM5OTk5OTk5OTk5OTk5ODU3OSAtMTEgMC43NSA0Ljk5MDAwMDAwMDAwMDAwMDIx
+	MzIgNTAuMjI5OTk5OTk5OTk5OTk2ODc0IDAgMCAqCi0xNDQgMCAwIDAgMCAyLjM5OTk5
+	OTk5OTk5OTk5OTkxMTIgLTI3Ljg5OTk5OTk5OTk5OTk5ODU3OSAtMTEgMC43NQoyIDUw
+	LjIyOTk5OTk5OTk5OTk5Njg3NCAwIDAgKiAtMTQ0IDwvUGFyYW1ldGVycz4KCQk8L1By
+	ZXNldERhdGE+CgkJPFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0IiPgoJCQk8UGFyYW1l
+	dGVycyBUeXBlPSJSZWFsV29ybGQiPjkyIDQwMDAgMTEwNzEgMC41OTk5OTk5OTk5OTk5
+	OTk5Nzc4IDAgMCAwIDAgKiAqCiogKiAqICogMCAwIDAgMCAwCi0yNyAtOCAwLjUgMzQu
+	OTkwMDAwMDAwMDAwMDAxOTkgNDAuMjcwMDAwMDAwMDAwMDAzMTI2IDAgMCAqIDAKMCAw
+	IDAgMCAwIC0xOS4xOTk5OTk5OTk5OTk5OTkyODkgLTggMC41IDE2LjAzMDAwMDAwMDAw
+	MDAwMTEzNwoyNSAwIDAgKiAwIDAgMCAwIDAKMCAtMzAuMTAwMDAwMDAwMDAwMDAxNDIx
+	IC04IDAuNSA0Ljk5MDAwMDAwMDAwMDAwMDIxMzIgOS45ODAwMDAwMDAwMDAwMDA0MjYz
+	IDAgMCAqCjAgMCAwIDAgMCAwIC0zNS4yOTk5OTk5OTk5OTk5OTcxNTggLTggMC41CjIg
+	NSAwIDAgKiAwIDwvUGFyYW1ldGVycz4KCQk8L1ByZXNldERhdGE+Cgk8L1ByZXNldD4K
+	PC9QcmVzZXRDaHVua1hNTFRyZWU+CgAAAAA=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAkAAAAAAAAAAAAAAABAAAAAAAAAAJEegAAAAAAA0P6AAAAAAAEQ3MA
+	AAAAAAVER0AAAAAABkRjQAAAAAAHREBAAAAAAAhEDYAAAAAACUOagAAAAAAKRAWAAAAA
+	AAtDpwAAAAAADAAAAAAAAAANAAAAAAAAAA5ELgAAAAAAD0QNgAAAAAAQQ5qAAAAAABFD
+	2QAAAAAAEkOnAAAAAAATAAAAAAAAABQAAAAAAAAAFURHwAAAAAAWRA2AAAAAABdDmoAA
+	AAAAGEOmgAAAAAAZQ6cAAAAAABoAAAAAAAAAGwAAAAAAAAAcRCSAAAAAAB1EDYAAAAAA
+	HkOagAAAAAAfQ0kAAAAAACBDpwAAAAAAIQAAAAAAAAAiAAAAAAAAACNEIsAA
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Multi Electro Mastering</string>
+              <key>subtype</key>
+              <integer>1145393491</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Release" id="27874" flags="Toggle" value="0.000000000000" parameter="0"/>
+        <Controllable name="Behavior" id="27876" flags="Toggle" value="0.000000000000" parameter="1"/>
+        <Controllable name="Knee" id="27878" flags="" value="1000.000000000000" parameter="2"/>
+        <Controllable name="Output Gain" id="27880" flags="" value="500.000000000000" parameter="3"/>
+        <Controllable name="Low Crossover" id="27882" flags="" value="243.000000000000" parameter="4"/>
+        <Controllable name="Mid Crossover" id="27884" flags="" value="797.000000000000" parameter="5"/>
+        <Controllable name="High Crossover" id="27886" flags="" value="909.000000000000" parameter="6"/>
+        <Controllable name="Crossover Q" id="27888" flags="" value="769.000000000000" parameter="7"/>
+        <Controllable name="Band 1 Gain" id="27890" flags="" value="566.000000000000" parameter="8"/>
+        <Controllable name="Band 1 Range" id="27892" flags="" value="309.000000000000" parameter="9"/>
+        <Controllable name="Band 1 Attack" id="27894" flags="" value="534.000000000000" parameter="10"/>
+        <Controllable name="Band 1 Release" id="27896" flags="" value="334.000000000000" parameter="11"/>
+        <Controllable name="Band 1 Solo" id="27898" flags="Toggle" value="0.000000000000" parameter="12"/>
+        <Controllable name="Band 1 Bypass" id="27900" flags="Toggle" value="0.000000000000" parameter="13"/>
+        <Controllable name="Band 1 Thresh" id="27902" flags="" value="696.000000000000" parameter="14"/>
+        <Controllable name="Band 2 Gain" id="27904" flags="" value="566.000000000000" parameter="15"/>
+        <Controllable name="Band 2 Range" id="27906" flags="" value="309.000000000000" parameter="16"/>
+        <Controllable name="Band 2 Attack" id="27908" flags="" value="434.000000000000" parameter="17"/>
+        <Controllable name="Band 2 Release" id="27910" flags="" value="334.000000000000" parameter="18"/>
+        <Controllable name="Band 2 Solo" id="27912" flags="Toggle" value="0.000000000000" parameter="19"/>
+        <Controllable name="Band 2 Bypass" id="27914" flags="Toggle" value="0.000000000000" parameter="20"/>
+        <Controllable name="Band 2 Thresh" id="27916" flags="" value="799.000000000000" parameter="21"/>
+        <Controllable name="Band 3 Gain" id="27918" flags="" value="566.000000000000" parameter="22"/>
+        <Controllable name="Band 3 Range" id="27920" flags="" value="309.000000000000" parameter="23"/>
+        <Controllable name="Band 3 Attack" id="27922" flags="" value="333.000000000000" parameter="24"/>
+        <Controllable name="Band 3 Release" id="27924" flags="" value="334.000000000000" parameter="25"/>
+        <Controllable name="Band 3 Solo" id="27926" flags="Toggle" value="0.000000000000" parameter="26"/>
+        <Controllable name="Band 3 Bypass" id="27928" flags="Toggle" value="0.000000000000" parameter="27"/>
+        <Controllable name="Band 3 Thresh" id="27930" flags="" value="658.000000000000" parameter="28"/>
+        <Controllable name="Band 4 Gain" id="27932" flags="" value="566.000000000000" parameter="29"/>
+        <Controllable name="Band 4 Range" id="27934" flags="" value="309.000000000000" parameter="30"/>
+        <Controllable name="Band 4 Attack" id="27936" flags="" value="201.000000000000" parameter="31"/>
+        <Controllable name="Band 4 Release" id="27938" flags="" value="334.000000000000" parameter="32"/>
+        <Controllable name="Band 4 Solo" id="27940" flags="Toggle" value="0.000000000000" parameter="33"/>
+        <Controllable name="Band 4 Bypass" id="27942" flags="Toggle" value="0.000000000000" parameter="34"/>
+        <Controllable name="Band 4 Thresh" id="27944" flags="" value="651.000000000000" parameter="35"/>
+      </Processor>
+      <Processor id="33074" name="L2 (s)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1278365011-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAACfgAAAAQAAAABTDJNU3NldEEAAAJeWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IkhpIFJlcyBDRCBNYXN0ZXIiIEdlbmVyaWNU
+	eXBlPSJMMiAgIj4KCQk8UHJlc2V0SGVhZGVyPgoJCQk8UGx1Z2luTmFtZT5MMjwvUGx1
+	Z2luTmFtZT4KCQkJPFBsdWdpblZlcnNpb24+OS4zLjA8L1BsdWdpblZlcnNpb24+CgkJ
+	CTxBY3RpdmVTZXR1cD5TRVRVUF9BPC9BY3RpdmVTZXR1cD4KCQkJPFJlYWRPbmx5PnRy
+	dWU8L1JlYWRPbmx5PgoJCTwvUHJlc2V0SGVhZGVyPgoJCTxNZXNzYWdlVG9TaGVsbC8+
+	CgkJPFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0EiIFNldHVwTmFtZT0iSGkgUmVzIENE
+	IE1hc3RlciI+CgkJCTxQYXJhbWV0ZXJzIFR5cGU9IlJlYWxXb3JsZCI+MSAtNiAtMC4x
+	OTk5OTk5OTk5OTk5OTk5NTU1OSAqICogKiAqICogNCAwCjAgMSAzIDEgPC9QYXJhbWV0
+	ZXJzPgoJCTwvUHJlc2V0RGF0YT4KCQk8UHJlc2V0RGF0YSBTZXR1cD0iU0VUVVBfQiI+
+	CgkJCTxQYXJhbWV0ZXJzIFR5cGU9IlJlYWxXb3JsZCI+MSAwIDAgKiAqICogKiAqIDAg
+	MAowIDEgMiAxIDwvUGFyYW1ldGVycz4KCQk8L1ByZXNldERhdGE+Cgk8L1ByZXNldD4K
+	PC9QcmVzZXRDaHVua1hNTFRyZWU+CgAAAAA=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAHAAAAAERHwAAAAAABRHhAAAAAAAJDyAAAAAAAA0CAAAAAAAAEP4AA
+	AAAAAAVAQAAAAAAABj+AAAA=
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Hi Res CD Master</string>
+              <key>subtype</key>
+              <integer>1278365011</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Thresh Slider" id="33076" flags="" value="799.000000000000" parameter="0"/>
+        <Controllable name="Ceiling Slider" id="33078" flags="" value="993.000000000000" parameter="1"/>
+        <Controllable name="Release Slider" id="33080" flags="" value="400.000000000000" parameter="2"/>
+        <Controllable name="Quantize" id="33082" flags="" value="4.000000000000" parameter="3"/>
+        <Controllable name="IDR Type" id="33084" flags="" value="1.000000000000" parameter="4"/>
+        <Controllable name="Noise Shaping" id="33086" flags="" value="3.000000000000" parameter="5"/>
+        <Controllable name="ARC" id="33088" flags="Toggle" value="1.000000000000" parameter="6"/>
+      </Processor>
+      <Processor id="23925" name="meter-Master" active="yes" user-latency="0" type="meter"/>
+      <Processor id="32999" name="WLM Meter (s)" active="no" user-latency="0" type="audiounit" unique-id="1635083896-1464618323-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAAGEgAAAAQAAAABV0xNU3NldEEAAAXyWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IldMTSBGdWxsIFJlc2V0IiBHZW5lcmljVHlw
+	ZT0iTE1HUiI+CgkJPFByZXNldEhlYWRlcj4KCQkJPFBsdWdpbk5hbWU+V0xNPC9QbHVn
+	aW5OYW1lPgoJCQk8UGx1Z2luVmVyc2lvbj45LjMuMzA8L1BsdWdpblZlcnNpb24+CgkJ
+	CTxBY3RpdmVTZXR1cD5TRVRVUF9BPC9BY3RpdmVTZXR1cD4KCQkJPFJlYWRPbmx5PnRy
+	dWU8L1JlYWRPbmx5PgoJCTwvUHJlc2V0SGVhZGVyPgoJCTxNZXNzYWdlVG9TaGVsbC8+
+	CgkJPFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0EiIFNldHVwTmFtZT0iV0xNIEZ1bGwg
+	UmVzZXQiPgoJCQk8UGFyYW1ldGVycyBUeXBlPSJSZWFsV29ybGQiPjAgKiAqICogKiAq
+	ICogKiAtMiAyLjI2MDE0NzM0Mjc4MzE1Mzc2NzcKMiAwIC01NCAtNTQgLTU0IC0xOCAt
+	MTggNDQgKgoqIDAgMCAwIC0xMi41MDIwNTQ2NjI1NjExMzU5NTYgMCAyLjI2MDE0NzM0
+	Mjc4MzE1Mzc2NzcgKiAqCjAgMCAxIDAgMCAwICogKiAqCiogLTIzIC0yMCAtMTUgNjk4
+	IDIwMCA0MCA2MDMgODA5CjEwMDAgMSAtMTIgMCAwIDAuMDEwMDAwMDAwMDAwMDAwMDAw
+	MjA4IDE1MCAwIDE1MDAwCjAgLTQyIDUwMCAyMDA0IDUwMDEgLTQyIDUwMDEgKiAqCiog
+	MCAxIDAuNSAxMjA1IDEyMDUgKiAxMDAwIDUwOAoyMDAgLTc0ICogMC42NzU4NDg2MDMy
+	NDg1OTYxOTE0MSAqICogKiAqICoKKiAqICogKiAqICogKiAqICoKMCAwIDAgMCA3ICog
+	KiAyIDUKMSAwIDAgMCAwIC0xNiAtMzIgLTI0IDkwCjc0IDgzIDAgMCA4IC01OS45Mzk5
+	OTk5OTk5OTk5OTc3MjYgMiAwICoKKiAqICogKiAwICogKiAqIDAKMCAwIDAgMiAqIDEg
+	MSAwIDQKKiAwICogMCA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXREYXRhPgoJCTxQcmVz
+	ZXREYXRhIFNldHVwPSJTRVRVUF9CIiBTZXR1cE5hbWU9IldMTSBGdWxsIFJlc2V0Ij4K
+	CQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4wICogKiAqICogKiAqICogLTIg
+	LTEyLjEyOTY1MjY5MDgyNjYwNjY4NwoyIDAgLTU0IC01NCAtNTQgLTE4IC0xOCA0NCAq
+	CiogMCAwIDAgLTIyLjQ1MjA5MTc2OTY0NTI5NjE4MiAwIC0xMi4xMjk2NTI2OTA4MjY2
+	MDY2ODcgKiAqCjAgMCAxIDAgMCAwICogKiAqCiogLTIzIC0yMCAtMTUgNjk4IDIwMCA0
+	MCA2MDMgODA5CjEwMDAgMSAtMTIgMCAwIDAuMDEwMDAwMDAwMDAwMDAwMDAwMjA4IDE1
+	MCAwIDE1MDAwCjAgLTQyIDUwMCAyMDA0IDUwMDEgLTQyIDUwMDEgKiAqCiogMCAxIDAu
+	NSAxMjA1IDEyMDUgKiAxMDAwIDUwOAoyMDAgLTc0ICogMC4xMDQzNzM2MTE1MDk3OTk5
+	NzExNSAqICogKiAqICoKKiAqICogKiAqICogKiAqICoKMCAwIDAgMCAwICogKiAyIDUK
+	MSAwIDAgMCAwIC0xNiAtMzIgLTI0IDkwCjc0IDgzIDAgMCA4IC01OS45Mzk5OTk5OTk5
+	OTk5OTc3MjYgMiAwICoKKiAqICogKiAwICogKiAqIDAKMCAwIDAgMiAqIDEgMSAwIDQK
+	KiAwICogMCA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXREYXRhPgoJPC9QcmVzZXQ+Cjwv
+	UHJlc2V0Q2h1bmtYTUxUcmVlPgpzdGVy
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAVAAAAAEAAAAAAAAABP4AAAAAAAAJEUFVVAAAAA0Q55b4AAAAERGNF
+	0QAAAAVEQx84AAAABkO7gAAAAAAHRAdqqwAAAAhAAAAAAAAACUAAAAAAAAAKQIAAAAAA
+	AAsAAAAAAAAADEPaw+wAAAANAAAAAAAAAA4AAAAAAAAAD0RlQWcAAAAQAAAAAAAAABE/
+	gAAAAAAAEgAAAAAAAAATRGYAAAAAABQ/gAAA
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Untitled</string>
+              <key>subtype</key>
+              <integer>1464618323</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Method" id="33001" flags="" value="2.000000000000" parameter="0"/>
+        <Controllable name="Weighting" id="33003" flags="" value="1.000000000000" parameter="1"/>
+        <Controllable name="Short Max" id="33005" flags="" value="833.333312988281" parameter="2"/>
+        <Controllable name="Short Min" id="33007" flags="" value="743.589721679688" parameter="3"/>
+        <Controllable name="Short Max Leq(m)" id="33009" flags="" value="909.090881347656" parameter="4"/>
+        <Controllable name="Short Min Leq(m)" id="33011" flags="" value="780.487792968750" parameter="5"/>
+        <Controllable name="Target" id="33013" flags="" value="375.000000000000" parameter="6"/>
+        <Controllable name="Target Leq(m)" id="33015" flags="" value="541.666687011719" parameter="7"/>
+        <Controllable name="Momentary Scale" id="33017" flags="" value="2.000000000000" parameter="8"/>
+        <Controllable name="Channels" id="33019" flags="" value="2.000000000000" parameter="9"/>
+        <Controllable name="Short Time" id="33021" flags="" value="4.000000000000" parameter="10"/>
+        <Controllable name="HiPass On/Off" id="33023" flags="Toggle" value="0.000000000000" parameter="11"/>
+        <Controllable name="HiPass Freq" id="33025" flags="" value="437.530639648438" parameter="12"/>
+        <Controllable name="HiPass Slop" id="33027" flags="Toggle" value="0.000000000000" parameter="13"/>
+        <Controllable name="LoPass On/Off" id="33029" flags="Toggle" value="0.000000000000" parameter="14"/>
+        <Controllable name="LoPass Freq" id="33031" flags="" value="917.021911621094" parameter="15"/>
+        <Controllable name="LoPass Slop" id="33033" flags="Toggle" value="0.000000000000" parameter="16"/>
+        <Controllable name="Follow Transport" id="33035" flags="Toggle" value="1.000000000000" parameter="17"/>
+        <Controllable name="Integration Play/Pause" id="33037" flags="Toggle" value="0.000000000000" parameter="18"/>
+        <Controllable name="TruePeak Max" id="33039" flags="" value="920.000000000000" parameter="19"/>
+        <Controllable name="Automation Warning" id="33041" flags="" value="1.000000000000" parameter="20"/>
+      </Processor>
+      <Processor id="23926" name="Master" active="yes" user-latency="0" own-input="yes" own-output="no" output="Master" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="23912" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="23916" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="23914" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="23918" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="23920" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Slavable/>
+    </Route>
+    <Route id="24475" name="Fred" default-type="audio" strict-io="1" active="yes" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterKrms" saved-meter-point="MeterPostFader" mode="Normal">
+      <PresentationInfo order="1" flags="AudioTrack,OrderSet" color="3051736831"/>
+      <Controllable name="solo" id="24483" flags="Toggle,RealTime" value="0.000000000000" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="24489" flags="Toggle,RealTime" value="0.000000000000" solo-isolated="no"/>
+      <Controllable name="solo-safe" id="24491" flags="Toggle" value="0.000000000000" solo-safe="no"/>
+      <IO name="Fred" id="24503" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Fred/audio_in 1"/>
+      </IO>
+      <IO name="Fred" id="24504" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Fred/audio_out 1">
+          <Connection other="voice bus/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="Fred/audio_out 2">
+          <Connection other="voice bus/audio_in 2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="24485" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="phase" id="24487" flags="Toggle" value="0.000000000000" phase-invert="0"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="24494" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="24498" flags="" value="0.000000000000"/>
+        <Controllable name="pan-elevation" id="24496" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="24500" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="24502" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="24506" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="24481" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="26622" name="a-Amplifier" active="yes" user-latency="0" type="luaproc" unique-id="1a4364e9bd9ac6d9fa91211b3ec514f641eca283" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <luaproc last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <script lua="Lua 5.3">YXJkb3VyIHsKCVsidHlwZSJdICAgID0gImRzcCIsCgluYW1lICAgICAgICA9ICJhLUFtcGxpZmllciIsCgljYXRlZ29yeSAgICA9ICJBbXBsaWZpZXIiLAoJbGljZW5zZSAgICAgPSAiTUlUIiwKCWF1dGhvciAgICAgID0gIkFyZG91ciBUZWFtIiwKCWRlc2NyaXB0aW9uID0gW1tWZXJzYXRpbGUgKy8tIDIwZEIgbXVsdGljaGFubmVsIGFtcGxpZmllcl1dCn0KCmZ1bmN0aW9uIGRzcF9pb2NvbmZpZyAoKQoJcmV0dXJuCgl7CgkJLS0gLTEsIC0xID0gYW55IG51bWJlciBvZiBjaGFubmVscyBhcyBsb25nIGFzIGlucHV0IGFuZCBvdXRwdXQgY291bnQgbWF0Y2hlcwoJCXsgYXVkaW9faW4gPSAtMSwgYXVkaW9fb3V0ID0gLTF9LAoJfQplbmQKCgpmdW5jdGlvbiBkc3BfcGFyYW1zICgpCglyZXR1cm4KCXsKCQl7IFsidHlwZSJdID0gImlucHV0IiwgbmFtZSA9ICJHYWluIiwgbWluID0gLTIwLCBtYXggPSAyMCwgZGVmYXVsdCA9IDAsIHVuaXQ9ImRCIn0sCgl9CmVuZAoKbG9jYWwgbHBmID0gMC4wMiAtLSBwYXJhbWV0ZXIgbG93LXBhc3MgZmlsdGVyIHRpbWUtY29uc3RhbnQKbG9jYWwgY3VyX2dhaW4gPSAwIC0tIGN1cnJlbnQgc21vb3RoZWQgZ2FpbiAoZEIpCgotLSBjYWxsZWQgb25jZSB3aGVuIHBsdWdpbiBpcyBpbnN0YW50aWF0ZWQKZnVuY3Rpb24gZHNwX2luaXQgKHJhdGUpCglscGYgPSA3ODAgLyByYXRlIC0tIGludGVycG9sYXRpb24gdGltZSBjb25zdGFudAplbmQKCmZ1bmN0aW9uIGxvd19wYXNzX2ZpbHRlcl9wYXJhbSAob2xkLCBuZXcsIGxpbWl0KQoJaWYgbWF0aC5hYnMgKG9sZCAtIG5ldykgPCBsaW1pdCAgdGhlbgoJCXJldHVybiBuZXcKCWVsc2UKCQlyZXR1cm4gb2xkICsgbHBmICogKG5ldyAtIG9sZCkKCWVuZAplbmQKCi0tIHRoZSBEU1AgY2FsbGJhY2sgZnVuY3Rpb24KLS0gImlucyIgYW5kICJvdXRzIiBhcmUgaHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNDOkZsb2F0QXJyYXkKZnVuY3Rpb24gZHNwX3J1biAoaW5zLCBvdXRzLCBuX3NhbXBsZXMpCglsb2NhbCBjdHJsID0gQ3RybFBvcnRzOmFycmF5KCkgLS0gZ2V0IGNvbnRyb2wgcG9ydCBhcnJheSAocmVhZC93cml0ZSkKCWxvY2FsIHNpeiA9IG5fc2FtcGxlcyAtLSBzYW1wbGVzIHJlbWFpbmluZyB0byBwcm9jZXNzCglsb2NhbCBvZmYgPSAwIC0tIGFscmVhZHkgcHJvY2Vzc2VkIHNhbXBsZXMKCWxvY2FsIGNoYW5nZWQgPSBmYWxzZQoKCS0tIGlmIHRoZSBnYWluIHBhcmFtZXRlciB3YXMgY2hhbmdlZCwgcHJvY2VzcyBhdCBtb3N0IDMyIHNhbXBsZXMgYXQgYSB0aW1lCgktLSBhbmQgaW50ZXJwb2xhdGUgZ2FpbiB1bnRpbCB0aGUgY3VycmVudCBzZXR0aW5ncyBtYXRjaCB0aGUgdGFyZ2V0IHZhbHVlcwoJaWYgY3VyX2dhaW4gfj0gY3RybFsxXSB0aGVuCgkJY2hhbmdlZCA9IHRydWUKCQlzaXogPSAzMgoJZW5kCgoJd2hpbGUgbl9zYW1wbGVzID4gMCBkbwoJCWlmIHNpeiA+IG5fc2FtcGxlcyB0aGVuIHNpeiA9IG5fc2FtcGxlcyBlbmQgLS0gcHJvY2VzcyBhdCBtb3N0ICJyZW1haW5pbmcgc2FtcGxlcyIKCQlpZiBjaGFuZ2VkIHRoZW4KCQkJLS0gc21vb3RoIGdhaW4gY2hhbmdlcyBhYm92ZSAwLjAyIGRCIGRpZmZlcmVuY2UKCQkJY3VyX2dhaW4gPSBsb3dfcGFzc19maWx0ZXJfcGFyYW0gKGN1cl9nYWluLCBjdHJsWzFdLCAwLjAyKQoJCWVuZAoKCQlsb2NhbCBnYWluID0gQVJET1VSLkRTUC5kQl90b19jb2VmZmljaWVudCAoY3VyX2dhaW4pIC0tIDEwIF4gKDAuMDUgKiBjdXJfZ2FpbikKCgkJZm9yIGMgPSAxLCNpbnMgZG8gLS0gcHJvY2VzcyBhbGwgY2hhbm5lbHMKCQkJLS0gY2hlY2sgaWYgb3V0cHV0IGFuZCBpbnB1dCBidWZmZXJzIGZvciB0aGlzIGNoYW5uZWwgYXJlIGlkZW50aWNhbAoJCQktLSBodHRwOi8vbWFudWFsLmFyZG91ci5vcmcvbHVhLXNjcmlwdGluZy9jbGFzc19yZWZlcmVuY2UvI0M6RmxvYXRBcnJheQoJCQlpZiBub3QgaW5zW2NdOnNhbWVpbnN0YW5jZSAob3V0c1tjXSkgdGhlbgoJCQkJLS0gaHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNBUkRPVVI6RFNQCgkJCQlBUkRPVVIuRFNQLmNvcHlfdmVjdG9yIChvdXRzW2NdOm9mZnNldCAob2ZmKSwgaW5zW2NdOm9mZnNldCAob2ZmKSwgc2l6KQoJCQllbmQKCQkJQVJET1VSLkRTUC5hcHBseV9nYWluX3RvX2J1ZmZlciAob3V0c1tjXTpvZmZzZXQgKG9mZiksIHNpeiwgZ2Fpbik7IC0tIGFwcGx5LWdhaW4sIHByb2Nlc3MgaW4tcGxhY2UKCQllbmQKCQluX3NhbXBsZXMgPSBuX3NhbXBsZXMgLSBzaXoKCQlvZmYgPSBvZmYgKyBzaXoKCWVuZAoKLS1bWwoJaWYgY2hhbmdlZCB0aGVuCgkJc2VsZjpxdWV1ZV9kcmF3ICgpIC0tIG5vdGlmeSBkaXNwbGF5CgllbmQKLS1dXQplbmQKCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KLS0tIGlubGluZSBkaXNwbGF5ICsgdGV4dCBleGFtcGxlCgotLVtbCmxvY2FsIHR4dCA9IG5pbCAtLSBjYWNoZSBwYW5nbyBjb250ZXh0IGdsb2JhbGx5CgpmdW5jdGlvbiByZW5kZXJfaW5saW5lIChjdHgsIHcsIG1heF9oKQoJbG9jYWwgY3RybCA9IEN0cmxQb3J0czphcnJheSAoKSAtLSBnZXQgY29udHJvbCBwb3J0cwoKCWlmIG5vdCB0eHQgdGhlbgoJCS0tIGFsbG9jYXRlIFBhbmdvTGF5b3V0IGFuZCBzZXQgZm9udAoJCS0taHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNDYWlybzpQYW5nb0xheW91dAoJCXR4dCA9IENhaXJvLlBhbmdvTGF5b3V0IChjdHgsICJNb25vIDhweCIpCgllbmQKCgl0eHQ6c2V0X3RleHQgKHN0cmluZy5mb3JtYXQgKCIlKy4yZiBkQiIsIGN0cmxbMV0pKTsKCXR3LCB0aCA9IHR4dDpnZXRfcGl4ZWxfc2l6ZSAoKQoKCWxvY2FsIGggPSB0aCArIDQgLS0gdXNlIHRleHQtaGVpZ2h0IHdpdGggNHB4IHBhZGRpbmcKCWlmIChoID4gbWF4X2gpIHRoZW4gaCA9IG1heF9oIGVuZCAtLSBidXQgYXQgbW9zdCBtYXgtaGVpZ2h0CgoJLS0gY2xlYXIgYmFja2dyb3VuZAoJY3R4OnJlY3RhbmdsZSAoMCwgMCwgdywgaCkKCWN0eDpzZXRfc291cmNlX3JnYmEgKC4yLCAuMiwgLjIsIDEuMCkKCWN0eDpmaWxsICgpCgoJLS0gY2VudGVyIHRleHQKCWN0eDpzZXRfc291cmNlX3JnYmEgKC44LCAuOCwgLjgsIDEuMCkKCWN0eDptb3ZlX3RvICguNSAqICh3IC0gdHcpLCAuNSAqIChoIC0gdGgpKQoJdHh0OnNob3dfaW5fY2Fpcm9fY29udGV4dCAoY3R4KQoKCXJldHVybiB7dywgaH0KZW5kCi0tXV0K</script>
+          <Port id="0" value="+2.680412"/>
+        </luaproc>
+        <Controllable name="Gain" id="26624" flags="" value="2.680412054062" parameter="0"/>
+      </Processor>
+      <Processor id="26436" name="LinEQ Lowband (m)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1280398157-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAAEWgAAAAQAAAABTFFTTXNldEEAAAQ6WFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IkZ1bGwgUmVzZXQiIEdlbmVyaWNUeXBlPSJM
+	UEVRIj4KCQk8UHJlc2V0SGVhZGVyPgoJCQk8UGx1Z2luTmFtZT5MaW5FUTwvUGx1Z2lu
+	TmFtZT4KCQkJPFBsdWdpblZlcnNpb24+OS4zLjA8L1BsdWdpblZlcnNpb24+CgkJCTxB
+	Y3RpdmVTZXR1cD5TRVRVUF9BPC9BY3RpdmVTZXR1cD4KCQkJPFJlYWRPbmx5PnRydWU8
+	L1JlYWRPbmx5PgoJCTwvUHJlc2V0SGVhZGVyPgoJCTxNZXNzYWdlVG9TaGVsbC8+CgkJ
+	PFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0EiIFNldHVwTmFtZT0iRnVsbCBSZXNldCI+
+	CgkJCTxQYXJhbWV0ZXJzIFR5cGU9IlJlYWxXb3JsZCI+MCAqICogKiAqICogKiAxIDAg
+	KgoxIDAgMyAwIDUwIDEuMTk5OTk5OTk5OTk5OTk5OTU1NiAxIDAgMAozNDQuNTMxMjUg
+	MiAxIDAgMCAxMDMzLjU5Mzc1IDIgMSAwCjAgMjU4My45ODQzNzUgMiAxIDAgMCA2NDU5
+	Ljk2MDkzNzUgMiAxCjMgMCAxMTAyNSAwLjkwMDAwMDAwMDAwMDAwMDAyMjIgMSA0IDAg
+	NjQuNTk5NjA5Mzc1IDAuOTAwMDAwMDAwMDAwMDAwMDIyMgowIDAgMy4xMDAwMDAwMDAw
+	MDAwMDAwODg4IDE2MS40OTkwMjM0Mzc1IDEuMTEwMDAwMDAwMDAwMDAwMDk3NyAwIDAg
+	MCA2MDAKMiAwIDAgMCA1MTYuNzk2ODc1IDEuMTk5OTk5OTk5OTk5OTk5OTU1NiA8L1Bh
+	cmFtZXRlcnM+CgkJPC9QcmVzZXREYXRhPgoJCTxQcmVzZXREYXRhIFNldHVwPSJTRVRV
+	UF9CIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4wICogKiAqICogKiAq
+	IDEgMCAqCjEgMSAwIDAgOTYgMS4xOTk5OTk5OTk5OTk5OTk5NTU2IDEgMCAwCjI1OCAx
+	IDEgMCAwIDY4OSAxIDEgMAowIDE4MDggMSAxIDAgMCA0NDc4IDEgMQowIDAgMTEwMjUg
+	MC45MDAwMDAwMDAwMDAwMDAwMjIyIDAgNCAwIDMyIDAuOTAwMDAwMDAwMDAwMDAwMDIy
+	MgoxIDAgMCAxMzkgMC45MDAwMDAwMDAwMDAwMDAwMjIyIDEgMCAwIDYwMAoyIDEgMCAw
+	IDc1MCAxLjE5OTk5OTk5OTk5OTk5OTk1NTYgPC9QYXJhbWV0ZXJzPgoJCTwvUHJlc2V0
+	RGF0YT4KCTwvUHJlc2V0Pgo8L1ByZXNldENodW5rWE1MVHJlZT4KAAAiAA==
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAUAAAAAD+AAAAAAAABQIAAAAAAAAJD+gAAAAAAA0NyaHEAAAAEQ8EA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHRAnAAAAAAAhDtoAAAAAACUPhAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADEP6AAAAAAANRAUAAAAAAA5EHoAAAAAAD0R6AAAAAAAQAAAAAAAAABE/
+	gAAAAAAAEj+AAAAAAAATAAAAAA==
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Full Reset</string>
+              <key>subtype</key>
+              <integer>1280398157</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Band1 On/Off" id="26438" flags="Toggle" value="1.000000000000" parameter="0"/>
+        <Controllable name="Band1 Type" id="26440" flags="" value="4.000000000000" parameter="1"/>
+        <Controllable name="Band1 Gain" id="26442" flags="" value="500.000000000000" parameter="2"/>
+        <Controllable name="Band1 Frq" id="26444" flags="" value="242.407974243164" parameter="3"/>
+        <Controllable name="Band1 Q" id="26446" flags="" value="386.000000000000" parameter="4"/>
+        <Controllable name="Band2 On/Off" id="26448" flags="Toggle" value="0.000000000000" parameter="5"/>
+        <Controllable name="Band2 Type" id="26450" flags="" value="0.000000000000" parameter="6"/>
+        <Controllable name="Band2 Gain" id="26452" flags="" value="551.000000000000" parameter="7"/>
+        <Controllable name="Band2 Frq" id="26454" flags="" value="365.000000000000" parameter="8"/>
+        <Controllable name="Band2 Q" id="26456" flags="" value="450.000000000000" parameter="9"/>
+        <Controllable name="Band3 On/Off" id="26458" flags="Toggle" value="0.000000000000" parameter="10"/>
+        <Controllable name="Band3 Type" id="26460" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="Band3 Gain" id="26462" flags="" value="500.000000000000" parameter="12"/>
+        <Controllable name="Band3 Frq" id="26464" flags="" value="532.000000000000" parameter="13"/>
+        <Controllable name="Band3 Q" id="26466" flags="" value="634.000000000000" parameter="14"/>
+        <Controllable name="Input Gain" id="26468" flags="" value="1000.000000000000" parameter="15"/>
+        <Controllable name="Trim" id="26470" flags="Toggle" value="0.000000000000" parameter="16"/>
+        <Controllable name="Scale" id="26472" flags="Toggle" value="1.000000000000" parameter="17"/>
+        <Controllable name="Dither type" id="26474" flags="Toggle" value="1.000000000000" parameter="18"/>
+        <Controllable name="Method" id="26476" flags="" value="0.000000000000" parameter="19"/>
+      </Processor>
+      <Processor id="32170" name="C1 comp-gate (m)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1129270605-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAADxQAAAAQAAAABQ09NTXNldEEAAAOlWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IlNwZWVjaCBjb21wcmVzc29yIiBHZW5lcmlj
+	VHlwZT0iQzEgICI+CgkJPFByZXNldEhlYWRlcj4KCQkJPFBsdWdpbk5hbWU+QzE8L1Bs
+	dWdpbk5hbWU+CgkJCTxQbHVnaW5WZXJzaW9uPjkuMy4wPC9QbHVnaW5WZXJzaW9uPgoJ
+	CQk8QWN0aXZlU2V0dXA+U0VUVVBfQTwvQWN0aXZlU2V0dXA+CgkJCTxSZWFkT25seT50
+	cnVlPC9SZWFkT25seT4KCQk8L1ByZXNldEhlYWRlcj4KCQk8TWVzc2FnZVRvU2hlbGwv
+	PgoJCTxQcmVzZXREYXRhIFNldHVwPSJTRVRVUF9BIiBTZXR1cE5hbWU9IlNwZWVjaCBj
+	b21wcmVzc29yIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4wLjAxMDAw
+	MDAwMDAwMDAwMDAwMDIwOCAxIDUuMDA5OTk5OTk5OTk5OTk5Nzg2OCAyMCAwIC00NSAt
+	NDUgMSAtMzkgKgoqIDAgLTEwMCAtMTAwIDUuMDA5OTk5OTk5OTk5OTk5Nzg2OCA1MCAx
+	MCAtNDUgMi40MTAwMDAwMDAwMDAwMDAxNDIxCjAgMSAqICogMSAwIC0zIC0xMDAgLTQ1
+	CiogKiAqICogMCAwIDIgMTAwIDAuMTAwMDAwMDAwMDAwMDAwMDA1NTUKMSAwIDE3MyAx
+	NzMgMiAwIDAgMiAqCiogKiAqICogPC9QYXJhbWV0ZXJzPgoJCTwvUHJlc2V0RGF0YT4K
+	CQk8UHJlc2V0RGF0YSBTZXR1cD0iU0VUVVBfQiI+CgkJCTxQYXJhbWV0ZXJzIFR5cGU9
+	IlJlYWxXb3JsZCI+MC4wMTAwMDAwMDAwMDAwMDAwMDAyMDggMCAyIDMwIDAgLTEwMCAt
+	MTAwIDAgLTEwMCAqCiogMCAtMTAwIC0xMDAgMiA1MCAwIDAgMQowIDAgKiAqIDAgMCAw
+	IC0xMDAgLTEwMAoqICogKiAqIDAgMCAwIDcxNzkgMC41OTk5OTk5OTk5OTk5OTk5Nzc4
+	CjAgMCAxNzMgMTczIDAgMCAwIDAgKgoqICogKiAqIDwvUGFyYW1ldGVycz4KCQk8L1By
+	ZXNldERhdGE+Cgk8L1ByZXNldD4KPC9QcmVzZXRDaHVua1hNTFRyZWU+ClNldHU=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAbAAAAAD+AAAAAAAABAAAAAAAAAAI/gAAAAAAAA0QHAAAAAAAEQ6MA
+	AAAAAAVDWwAAAAAABkQJgAAAAAAHRAmAAAAAAAg/gAAAAAAACQAAAAAAAAAKRAcAAAAA
+	AAtD1AAAAAAADEPHgAAAAAANQ8YAAAAAAA5D+gAAAAAAD0QfgAAAAAAQRAmAAAAAABEA
+	AAAAAAAAEkAAAAAAAAATQ4CAAAAAABQAAAAAAAAAFT+AAAAAAAAWAAAAAAAAABc/gAAA
+	AAAAGEPmAAAAAAAZQ9SAAAAAABpEegAA
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Speech compressor</string>
+              <key>subtype</key>
+              <integer>1129270605</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Low/Peak ref" id="32172" flags="Toggle" value="1.000000000000" parameter="0"/>
+        <Controllable name="Gate Hold" id="32174" flags="" value="0.000000000000" parameter="1"/>
+        <Controllable name="LookAhead" id="32176" flags="Toggle" value="1.000000000000" parameter="2"/>
+        <Controllable name="Gate Attack" id="32178" flags="" value="540.000000000000" parameter="3"/>
+        <Controllable name="Gate Release" id="32180" flags="" value="326.000000000000" parameter="4"/>
+        <Controllable name="Floor" id="32182" flags="" value="219.000000000000" parameter="5"/>
+        <Controllable name="Gate open" id="32184" flags="" value="550.000000000000" parameter="6"/>
+        <Controllable name="Gate close" id="32186" flags="" value="550.000000000000" parameter="7"/>
+        <Controllable name="Expander/Gate" id="32188" flags="Toggle" value="1.000000000000" parameter="8"/>
+        <Controllable name="Exp Bypass" id="32190" flags="Toggle" value="0.000000000000" parameter="9"/>
+        <Controllable name="Comp Attack" id="32192" flags="" value="540.000000000000" parameter="10"/>
+        <Controllable name="Comp Release" id="32194" flags="" value="424.000000000000" parameter="11"/>
+        <Controllable name="PDR Tc" id="32196" flags="" value="399.000000000000" parameter="12"/>
+        <Controllable name="Ratio" id="32198" flags="" value="396.000000000000" parameter="13"/>
+        <Controllable name="Makeup Gain" id="32200" flags="" value="500.000000000000" parameter="14"/>
+        <Controllable name="Output Gain" id="32202" flags="" value="638.000000000000" parameter="15"/>
+        <Controllable name="Threshold" id="32204" flags="" value="550.000000000000" parameter="16"/>
+        <Controllable name="Comp Bypass" id="32206" flags="Toggle" value="0.000000000000" parameter="17"/>
+        <Controllable name="Filter Type" id="32208" flags="" value="2.000000000000" parameter="18"/>
+        <Controllable name="Filter Freq" id="32210" flags="" value="257.000000000000" parameter="19"/>
+        <Controllable name="Filter Q" id="32212" flags="" value="0.000000000000" parameter="20"/>
+        <Controllable name="Gate Filter On" id="32214" flags="" value="1.000000000000" parameter="21"/>
+        <Controllable name="Select monitor" id="32216" flags="" value="0.000000000000" parameter="22"/>
+        <Controllable name="Comp Filter On" id="32218" flags="" value="1.000000000000" parameter="23"/>
+        <Controllable name="Strap Att" id="32220" flags="" value="460.000000000000" parameter="24"/>
+        <Controllable name="Strap Rel" id="32222" flags="" value="425.000000000000" parameter="25"/>
+        <Controllable name="Strap Thresh" id="32224" flags="" value="1000.000000000000" parameter="26"/>
+      </Processor>
+      <Processor id="24505" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="24479" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="24507" name="meter-Fred" active="yes" user-latency="0" type="meter"/>
+      <Processor id="24508" name="Fred" active="yes" user-latency="0" own-input="yes" own-output="no" output="Fred" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="24494" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="24498" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="24496" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="24500" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="24502" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Slavable/>
+      <Controllable name="monitoring" id="24515" flags="RealTime" value="0.000000000000" monitoring=""/>
+      <Controllable name="recsafe" id="24513" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="recenable" id="24511" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Fred.1" name="Fred" id="24516" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
+    <Route id="24546" name="Alex" default-type="audio" strict-io="1" active="yes" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterKrms" saved-meter-point="MeterPostFader" mode="Normal">
+      <PresentationInfo order="2" flags="AudioTrack,OrderSet" color="3850558463"/>
+      <Controllable name="solo" id="24554" flags="Toggle,RealTime" value="0.000000000000" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="24560" flags="Toggle,RealTime" value="0.000000000000" solo-isolated="no"/>
+      <Controllable name="solo-safe" id="24562" flags="Toggle" value="0.000000000000" solo-safe="no"/>
+      <IO name="Alex" id="24574" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Alex/audio_in 1"/>
+      </IO>
+      <IO name="Alex" id="24575" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Alex/audio_out 1">
+          <Connection other="voice bus/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="Alex/audio_out 2">
+          <Connection other="voice bus/audio_in 2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="24556" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="phase" id="24558" flags="Toggle" value="0.000000000000" phase-invert="0"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="24565" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="24569" flags="" value="0.000000000000"/>
+        <Controllable name="pan-elevation" id="24567" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="24571" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="24573" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="24577" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="24552" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="26613" name="a-Amplifier" active="yes" user-latency="0" type="luaproc" unique-id="1a4364e9bd9ac6d9fa91211b3ec514f641eca283" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <luaproc last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <script lua="Lua 5.3">YXJkb3VyIHsKCVsidHlwZSJdICAgID0gImRzcCIsCgluYW1lICAgICAgICA9ICJhLUFtcGxpZmllciIsCgljYXRlZ29yeSAgICA9ICJBbXBsaWZpZXIiLAoJbGljZW5zZSAgICAgPSAiTUlUIiwKCWF1dGhvciAgICAgID0gIkFyZG91ciBUZWFtIiwKCWRlc2NyaXB0aW9uID0gW1tWZXJzYXRpbGUgKy8tIDIwZEIgbXVsdGljaGFubmVsIGFtcGxpZmllcl1dCn0KCmZ1bmN0aW9uIGRzcF9pb2NvbmZpZyAoKQoJcmV0dXJuCgl7CgkJLS0gLTEsIC0xID0gYW55IG51bWJlciBvZiBjaGFubmVscyBhcyBsb25nIGFzIGlucHV0IGFuZCBvdXRwdXQgY291bnQgbWF0Y2hlcwoJCXsgYXVkaW9faW4gPSAtMSwgYXVkaW9fb3V0ID0gLTF9LAoJfQplbmQKCgpmdW5jdGlvbiBkc3BfcGFyYW1zICgpCglyZXR1cm4KCXsKCQl7IFsidHlwZSJdID0gImlucHV0IiwgbmFtZSA9ICJHYWluIiwgbWluID0gLTIwLCBtYXggPSAyMCwgZGVmYXVsdCA9IDAsIHVuaXQ9ImRCIn0sCgl9CmVuZAoKbG9jYWwgbHBmID0gMC4wMiAtLSBwYXJhbWV0ZXIgbG93LXBhc3MgZmlsdGVyIHRpbWUtY29uc3RhbnQKbG9jYWwgY3VyX2dhaW4gPSAwIC0tIGN1cnJlbnQgc21vb3RoZWQgZ2FpbiAoZEIpCgotLSBjYWxsZWQgb25jZSB3aGVuIHBsdWdpbiBpcyBpbnN0YW50aWF0ZWQKZnVuY3Rpb24gZHNwX2luaXQgKHJhdGUpCglscGYgPSA3ODAgLyByYXRlIC0tIGludGVycG9sYXRpb24gdGltZSBjb25zdGFudAplbmQKCmZ1bmN0aW9uIGxvd19wYXNzX2ZpbHRlcl9wYXJhbSAob2xkLCBuZXcsIGxpbWl0KQoJaWYgbWF0aC5hYnMgKG9sZCAtIG5ldykgPCBsaW1pdCAgdGhlbgoJCXJldHVybiBuZXcKCWVsc2UKCQlyZXR1cm4gb2xkICsgbHBmICogKG5ldyAtIG9sZCkKCWVuZAplbmQKCi0tIHRoZSBEU1AgY2FsbGJhY2sgZnVuY3Rpb24KLS0gImlucyIgYW5kICJvdXRzIiBhcmUgaHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNDOkZsb2F0QXJyYXkKZnVuY3Rpb24gZHNwX3J1biAoaW5zLCBvdXRzLCBuX3NhbXBsZXMpCglsb2NhbCBjdHJsID0gQ3RybFBvcnRzOmFycmF5KCkgLS0gZ2V0IGNvbnRyb2wgcG9ydCBhcnJheSAocmVhZC93cml0ZSkKCWxvY2FsIHNpeiA9IG5fc2FtcGxlcyAtLSBzYW1wbGVzIHJlbWFpbmluZyB0byBwcm9jZXNzCglsb2NhbCBvZmYgPSAwIC0tIGFscmVhZHkgcHJvY2Vzc2VkIHNhbXBsZXMKCWxvY2FsIGNoYW5nZWQgPSBmYWxzZQoKCS0tIGlmIHRoZSBnYWluIHBhcmFtZXRlciB3YXMgY2hhbmdlZCwgcHJvY2VzcyBhdCBtb3N0IDMyIHNhbXBsZXMgYXQgYSB0aW1lCgktLSBhbmQgaW50ZXJwb2xhdGUgZ2FpbiB1bnRpbCB0aGUgY3VycmVudCBzZXR0aW5ncyBtYXRjaCB0aGUgdGFyZ2V0IHZhbHVlcwoJaWYgY3VyX2dhaW4gfj0gY3RybFsxXSB0aGVuCgkJY2hhbmdlZCA9IHRydWUKCQlzaXogPSAzMgoJZW5kCgoJd2hpbGUgbl9zYW1wbGVzID4gMCBkbwoJCWlmIHNpeiA+IG5fc2FtcGxlcyB0aGVuIHNpeiA9IG5fc2FtcGxlcyBlbmQgLS0gcHJvY2VzcyBhdCBtb3N0ICJyZW1haW5pbmcgc2FtcGxlcyIKCQlpZiBjaGFuZ2VkIHRoZW4KCQkJLS0gc21vb3RoIGdhaW4gY2hhbmdlcyBhYm92ZSAwLjAyIGRCIGRpZmZlcmVuY2UKCQkJY3VyX2dhaW4gPSBsb3dfcGFzc19maWx0ZXJfcGFyYW0gKGN1cl9nYWluLCBjdHJsWzFdLCAwLjAyKQoJCWVuZAoKCQlsb2NhbCBnYWluID0gQVJET1VSLkRTUC5kQl90b19jb2VmZmljaWVudCAoY3VyX2dhaW4pIC0tIDEwIF4gKDAuMDUgKiBjdXJfZ2FpbikKCgkJZm9yIGMgPSAxLCNpbnMgZG8gLS0gcHJvY2VzcyBhbGwgY2hhbm5lbHMKCQkJLS0gY2hlY2sgaWYgb3V0cHV0IGFuZCBpbnB1dCBidWZmZXJzIGZvciB0aGlzIGNoYW5uZWwgYXJlIGlkZW50aWNhbAoJCQktLSBodHRwOi8vbWFudWFsLmFyZG91ci5vcmcvbHVhLXNjcmlwdGluZy9jbGFzc19yZWZlcmVuY2UvI0M6RmxvYXRBcnJheQoJCQlpZiBub3QgaW5zW2NdOnNhbWVpbnN0YW5jZSAob3V0c1tjXSkgdGhlbgoJCQkJLS0gaHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNBUkRPVVI6RFNQCgkJCQlBUkRPVVIuRFNQLmNvcHlfdmVjdG9yIChvdXRzW2NdOm9mZnNldCAob2ZmKSwgaW5zW2NdOm9mZnNldCAob2ZmKSwgc2l6KQoJCQllbmQKCQkJQVJET1VSLkRTUC5hcHBseV9nYWluX3RvX2J1ZmZlciAob3V0c1tjXTpvZmZzZXQgKG9mZiksIHNpeiwgZ2Fpbik7IC0tIGFwcGx5LWdhaW4sIHByb2Nlc3MgaW4tcGxhY2UKCQllbmQKCQluX3NhbXBsZXMgPSBuX3NhbXBsZXMgLSBzaXoKCQlvZmYgPSBvZmYgKyBzaXoKCWVuZAoKLS1bWwoJaWYgY2hhbmdlZCB0aGVuCgkJc2VsZjpxdWV1ZV9kcmF3ICgpIC0tIG5vdGlmeSBkaXNwbGF5CgllbmQKLS1dXQplbmQKCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KLS0tIGlubGluZSBkaXNwbGF5ICsgdGV4dCBleGFtcGxlCgotLVtbCmxvY2FsIHR4dCA9IG5pbCAtLSBjYWNoZSBwYW5nbyBjb250ZXh0IGdsb2JhbGx5CgpmdW5jdGlvbiByZW5kZXJfaW5saW5lIChjdHgsIHcsIG1heF9oKQoJbG9jYWwgY3RybCA9IEN0cmxQb3J0czphcnJheSAoKSAtLSBnZXQgY29udHJvbCBwb3J0cwoKCWlmIG5vdCB0eHQgdGhlbgoJCS0tIGFsbG9jYXRlIFBhbmdvTGF5b3V0IGFuZCBzZXQgZm9udAoJCS0taHR0cDovL21hbnVhbC5hcmRvdXIub3JnL2x1YS1zY3JpcHRpbmcvY2xhc3NfcmVmZXJlbmNlLyNDYWlybzpQYW5nb0xheW91dAoJCXR4dCA9IENhaXJvLlBhbmdvTGF5b3V0IChjdHgsICJNb25vIDhweCIpCgllbmQKCgl0eHQ6c2V0X3RleHQgKHN0cmluZy5mb3JtYXQgKCIlKy4yZiBkQiIsIGN0cmxbMV0pKTsKCXR3LCB0aCA9IHR4dDpnZXRfcGl4ZWxfc2l6ZSAoKQoKCWxvY2FsIGggPSB0aCArIDQgLS0gdXNlIHRleHQtaGVpZ2h0IHdpdGggNHB4IHBhZGRpbmcKCWlmIChoID4gbWF4X2gpIHRoZW4gaCA9IG1heF9oIGVuZCAtLSBidXQgYXQgbW9zdCBtYXgtaGVpZ2h0CgoJLS0gY2xlYXIgYmFja2dyb3VuZAoJY3R4OnJlY3RhbmdsZSAoMCwgMCwgdywgaCkKCWN0eDpzZXRfc291cmNlX3JnYmEgKC4yLCAuMiwgLjIsIDEuMCkKCWN0eDpmaWxsICgpCgoJLS0gY2VudGVyIHRleHQKCWN0eDpzZXRfc291cmNlX3JnYmEgKC44LCAuOCwgLjgsIDEuMCkKCWN0eDptb3ZlX3RvICguNSAqICh3IC0gdHcpLCAuNSAqIChoIC0gdGgpKQoJdHh0OnNob3dfaW5fY2Fpcm9fY29udGV4dCAoY3R4KQoKCXJldHVybiB7dywgaH0KZW5kCi0tXV0K</script>
+          <Port id="0" value="+5.979382"/>
+        </luaproc>
+        <Controllable name="Gain" id="26615" flags="" value="5.979382038116" parameter="0"/>
+      </Processor>
+      <Processor id="26480" name="LinEQ Lowband (m)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1280398157-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAAD9wAAAAQAAAABTFFTTXNldEEAAAPXWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IiIgR2VuZXJpY1R5cGU9IkxQRVEiPgoJCTxQ
+	cmVzZXRIZWFkZXI+CgkJCTxQbHVnaW5OYW1lPkxpbkVRPC9QbHVnaW5OYW1lPgoJCQk8
+	UGx1Z2luVmVyc2lvbj45LjMuMDwvUGx1Z2luVmVyc2lvbj4KCQkJPEFjdGl2ZVNldHVw
+	PlNFVFVQX0E8L0FjdGl2ZVNldHVwPgoJCQk8UmVhZE9ubHk+dHJ1ZTwvUmVhZE9ubHk+
+	CgkJPC9QcmVzZXRIZWFkZXI+CgkJPE1lc3NhZ2VUb1NoZWxsLz4KCQk8UHJlc2V0RGF0
+	YSBTZXR1cD0iU0VUVVBfQSI+CgkJCTxQYXJhbWV0ZXJzIFR5cGU9IlJlYWxXb3JsZCI+
+	MCAqICogKiAqICogKiAxIDAgKgoxIDEgMCAwIDk2IDEuMTk5OTk5OTk5OTk5OTk5OTU1
+	NiAxIDAgMAoyNTggMSAxIDAgMCA2ODkgMSAxIDAKMCAxODA4IDEgMSAwIDAgNDQ3OCAx
+	IDEKMCAwIDExMDI1IDAuOTAwMDAwMDAwMDAwMDAwMDIyMiAxIDQgMCA2NC41OTk2MDkz
+	NzUgMC45MDAwMDAwMDAwMDAwMDAwMjIyCjAgMCAwIDEzOSAwLjkwMDAwMDAwMDAwMDAw
+	MDAyMjIgMCAwIDAgNjAwCjIgMSAwIDAgNzUwIDEuMTk5OTk5OTk5OTk5OTk5OTU1NiA8
+	L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXREYXRhPgoJCTxQcmVzZXREYXRhIFNldHVwPSJT
+	RVRVUF9CIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4wICogKiAqICog
+	KiAqIDEgMCAqCjEgMSAwIDAgOTYgMS4xOTk5OTk5OTk5OTk5OTk5NTU2IDEgMCAwCjI1
+	OCAxIDEgMCAwIDY4OSAxIDEgMAowIDE4MDggMSAxIDAgMCA0NDc4IDEgMQowIDAgMTEw
+	MjUgMC45MDAwMDAwMDAwMDAwMDAwMjIyIDAgNCAwIDMyIDAuOTAwMDAwMDAwMDAwMDAw
+	MDIyMgoxIDAgMCAxMzkgMC45MDAwMDAwMDAwMDAwMDAwMjIyIDEgMCAwIDYwMAoyIDEg
+	MCAwIDc1MCAxLjE5OTk5OTk5OTk5OTk5OTk1NTYgPC9QYXJhbWV0ZXJzPgoJCTwvUHJl
+	c2V0RGF0YT4KCTwvUHJlc2V0Pgo8L1ByZXNldENodW5rWE1MVHJlZT4KCgEAAA==
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAUAAAAAD+AAAAAAAABQIAAAAAAAAJD+gAAAAAAA0NyaHEAAAAEQ8Dh
+	RAAAAAUAAAAAAAAABgAAAAAAAAAHQ/oAAAAAAAhDqvxpAAAACUPBAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADEP6AAAAAAANRAT/qgAAAA5EHoAAAAAAD0R6AAAAAAAQAAAAAAAAABE/
+	gAAAAAAAEj+AAAAAAAATAAAAAA==
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Untitled</string>
+              <key>subtype</key>
+              <integer>1280398157</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Band1 On/Off" id="26438" flags="Toggle" value="1.000000000000" parameter="0"/>
+        <Controllable name="Band1 Type" id="26440" flags="" value="4.000000000000" parameter="1"/>
+        <Controllable name="Band1 Gain" id="26442" flags="" value="500.000000000000" parameter="2"/>
+        <Controllable name="Band1 Frq" id="26444" flags="" value="242.407974243164" parameter="3"/>
+        <Controllable name="Band1 Q" id="26446" flags="" value="385.759887695312" parameter="4"/>
+        <Controllable name="Band2 On/Off" id="26448" flags="Toggle" value="0.000000000000" parameter="5"/>
+        <Controllable name="Band2 Type" id="26450" flags="" value="0.000000000000" parameter="6"/>
+        <Controllable name="Band2 Gain" id="26452" flags="" value="500.000000000000" parameter="7"/>
+        <Controllable name="Band2 Frq" id="26454" flags="" value="341.971954345703" parameter="8"/>
+        <Controllable name="Band2 Q" id="26456" flags="" value="386.000000000000" parameter="9"/>
+        <Controllable name="Band3 On/Off" id="26458" flags="Toggle" value="0.000000000000" parameter="10"/>
+        <Controllable name="Band3 Type" id="26460" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="Band3 Gain" id="26462" flags="" value="500.000000000000" parameter="12"/>
+        <Controllable name="Band3 Frq" id="26464" flags="" value="531.994750976562" parameter="13"/>
+        <Controllable name="Band3 Q" id="26466" flags="" value="634.000000000000" parameter="14"/>
+        <Controllable name="Input Gain" id="26468" flags="" value="1000.000000000000" parameter="15"/>
+        <Controllable name="Trim" id="26470" flags="Toggle" value="0.000000000000" parameter="16"/>
+        <Controllable name="Scale" id="26472" flags="Toggle" value="1.000000000000" parameter="17"/>
+        <Controllable name="Dither type" id="26474" flags="Toggle" value="1.000000000000" parameter="18"/>
+        <Controllable name="Method" id="26476" flags="" value="0.000000000000" parameter="19"/>
+      </Processor>
+      <Processor id="32229" name="C1 comp-gate (m)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1129270605-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAADxQAAAAQAAAABQ09NTXNldEEAAAOlWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IlNwZWVjaCBjb21wcmVzc29yIiBHZW5lcmlj
+	VHlwZT0iQzEgICI+CgkJPFByZXNldEhlYWRlcj4KCQkJPFBsdWdpbk5hbWU+QzE8L1Bs
+	dWdpbk5hbWU+CgkJCTxQbHVnaW5WZXJzaW9uPjkuMy4wPC9QbHVnaW5WZXJzaW9uPgoJ
+	CQk8QWN0aXZlU2V0dXA+U0VUVVBfQTwvQWN0aXZlU2V0dXA+CgkJCTxSZWFkT25seT50
+	cnVlPC9SZWFkT25seT4KCQk8L1ByZXNldEhlYWRlcj4KCQk8TWVzc2FnZVRvU2hlbGwv
+	PgoJCTxQcmVzZXREYXRhIFNldHVwPSJTRVRVUF9BIiBTZXR1cE5hbWU9IlNwZWVjaCBj
+	b21wcmVzc29yIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4wLjAxMDAw
+	MDAwMDAwMDAwMDAwMDIwOCAxIDUuMDA5OTk5OTk5OTk5OTk5Nzg2OCAyMCAwIC00NSAt
+	NDUgMSAtMzkgKgoqIDAgLTEwMCAtMTAwIDUuMDA5OTk5OTk5OTk5OTk5Nzg2OCA1MCAx
+	MCAtNDUgMi40MTAwMDAwMDAwMDAwMDAxNDIxCjAgMSAqICogMSAwIC0zIC0xMDAgLTQ1
+	CiogKiAqICogMCAwIDIgMTAwIDAuMTAwMDAwMDAwMDAwMDAwMDA1NTUKMSAwIDE3MyAx
+	NzMgMiAwIDAgMiAqCiogKiAqICogPC9QYXJhbWV0ZXJzPgoJCTwvUHJlc2V0RGF0YT4K
+	CQk8UHJlc2V0RGF0YSBTZXR1cD0iU0VUVVBfQiI+CgkJCTxQYXJhbWV0ZXJzIFR5cGU9
+	IlJlYWxXb3JsZCI+MC4wMTAwMDAwMDAwMDAwMDAwMDAyMDggMCAyIDMwIDAgLTEwMCAt
+	MTAwIDAgLTEwMCAqCiogMCAtMTAwIC0xMDAgMiA1MCAwIDAgMQowIDAgKiAqIDAgMCAw
+	IC0xMDAgLTEwMAoqICogKiAqIDAgMCAwIDcxNzkgMC41OTk5OTk5OTk5OTk5OTk5Nzc4
+	CjAgMCAxNzMgMTczIDAgMCAwIDAgKgoqICogKiAqIDwvUGFyYW1ldGVycz4KCQk8L1By
+	ZXNldERhdGE+Cgk8L1ByZXNldD4KPC9QcmVzZXRDaHVua1hNTFRyZWU+CiBOYW0=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAbAAAAAD+AAAAAAAABAAAAAAAAAAI/gAAAAAAAA0QHAAAAAAAEQ6MA
+	AAAAAAVDWwAAAAAABkQJgAAAAAAHRAmAAAAAAAg/gAAAAAAACQAAAAAAAAAKRAcAAAAA
+	AAtD1AAAAAAADEPHgAAAAAANQ8YAAAAAAA5D+gAAAAAAD0QfgAAAAAAQRAmAAAAAABEA
+	AAAAAAAAEkAAAAAAAAATQ4CAAAAAABQAAAAAAAAAFT+AAAAAAAAWAAAAAAAAABc/gAAA
+	AAAAGEPmAAAAAAAZQ9SAAAAAABpEegAA
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Speech compressor</string>
+              <key>subtype</key>
+              <integer>1129270605</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Low/Peak ref" id="32231" flags="Toggle" value="1.000000000000" parameter="0"/>
+        <Controllable name="Gate Hold" id="32233" flags="" value="0.000000000000" parameter="1"/>
+        <Controllable name="LookAhead" id="32235" flags="Toggle" value="1.000000000000" parameter="2"/>
+        <Controllable name="Gate Attack" id="32237" flags="" value="540.000000000000" parameter="3"/>
+        <Controllable name="Gate Release" id="32239" flags="" value="326.000000000000" parameter="4"/>
+        <Controllable name="Floor" id="32241" flags="" value="219.000000000000" parameter="5"/>
+        <Controllable name="Gate open" id="32243" flags="" value="550.000000000000" parameter="6"/>
+        <Controllable name="Gate close" id="32245" flags="" value="550.000000000000" parameter="7"/>
+        <Controllable name="Expander/Gate" id="32247" flags="Toggle" value="1.000000000000" parameter="8"/>
+        <Controllable name="Exp Bypass" id="32249" flags="Toggle" value="0.000000000000" parameter="9"/>
+        <Controllable name="Comp Attack" id="32251" flags="" value="540.000000000000" parameter="10"/>
+        <Controllable name="Comp Release" id="32253" flags="" value="424.000000000000" parameter="11"/>
+        <Controllable name="PDR Tc" id="32255" flags="" value="399.000000000000" parameter="12"/>
+        <Controllable name="Ratio" id="32257" flags="" value="396.000000000000" parameter="13"/>
+        <Controllable name="Makeup Gain" id="32259" flags="" value="500.000000000000" parameter="14"/>
+        <Controllable name="Output Gain" id="32261" flags="" value="638.000000000000" parameter="15"/>
+        <Controllable name="Threshold" id="32263" flags="" value="550.000000000000" parameter="16"/>
+        <Controllable name="Comp Bypass" id="32265" flags="Toggle" value="0.000000000000" parameter="17"/>
+        <Controllable name="Filter Type" id="32267" flags="" value="2.000000000000" parameter="18"/>
+        <Controllable name="Filter Freq" id="32269" flags="" value="257.000000000000" parameter="19"/>
+        <Controllable name="Filter Q" id="32271" flags="" value="0.000000000000" parameter="20"/>
+        <Controllable name="Gate Filter On" id="32273" flags="" value="1.000000000000" parameter="21"/>
+        <Controllable name="Select monitor" id="32275" flags="" value="0.000000000000" parameter="22"/>
+        <Controllable name="Comp Filter On" id="32277" flags="" value="1.000000000000" parameter="23"/>
+        <Controllable name="Strap Att" id="32279" flags="" value="460.000000000000" parameter="24"/>
+        <Controllable name="Strap Rel" id="32281" flags="" value="425.000000000000" parameter="25"/>
+        <Controllable name="Strap Thresh" id="32283" flags="" value="1000.000000000000" parameter="26"/>
+      </Processor>
+      <Processor id="24576" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="24550" flags="GainLike" value="0.999999940395"/>
+      </Processor>
+      <Processor id="24578" name="meter-Alex" active="yes" user-latency="0" type="meter"/>
+      <Processor id="24579" name="Alex" active="yes" user-latency="0" own-input="yes" own-output="no" output="Alex" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="24565" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="24569" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="24567" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="24571" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="24573" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Slavable/>
+      <Controllable name="monitoring" id="24586" flags="RealTime" value="0.000000000000" monitoring=""/>
+      <Controllable name="recsafe" id="24584" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="recenable" id="24582" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Alex.1" name="Alex" id="24587" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
+    <Route id="26227" name="voice bus" default-type="audio" strict-io="1" active="yes" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterKrms">
+      <PresentationInfo order="3" flags="AudioBus,OrderSet" color="2880628223"/>
+      <Controllable name="solo" id="26235" flags="Toggle,RealTime" value="0.000000000000" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="26241" flags="Toggle,RealTime" value="0.000000000000" solo-isolated="no"/>
+      <Controllable name="solo-safe" id="26243" flags="Toggle" value="0.000000000000" solo-safe="no"/>
+      <IO name="voice bus" id="26255" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="voice bus/audio_in 1">
+          <Connection other="Alex/audio_out 1"/>
+          <Connection other="Fred/audio_out 1"/>
+        </Port>
+        <Port type="audio" name="voice bus/audio_in 2">
+          <Connection other="Alex/audio_out 2"/>
+          <Connection other="Fred/audio_out 2"/>
+        </Port>
+      </IO>
+      <IO name="voice bus" id="26256" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="voice bus/audio_out 1">
+          <Connection other="Master/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="voice bus/audio_out 2">
+          <Connection other="Master/audio_in 2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="26237" flags="Toggle,RealTime" value="0.000000000000"/>
+      <Controllable name="phase" id="26239" flags="Toggle" value="0.000000000000" phase-invert="00"/>
+      <Comment>1
+2 - moje dziwne
+4- elo!
+6 !!
+8
+
+1,4,6 </Comment>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="26246" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="26250" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="26248" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="26252" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="26254" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="26263" name="return 4" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="3"/>
+      <Processor id="26258" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="26233" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="26295" name="MaxxVolume (s)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1230392403-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAADcQAAAAQAAAABSVZMU3NldEEAAANRWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IlZvY2FsIEFic29sdXRlIExldmVsIiBHZW5l
+	cmljVHlwZT0iSVZPTCI+CgkJPFByZXNldEhlYWRlcj4KCQkJPFBsdWdpbk5hbWU+TWF4
+	eFZvbHVtZTwvUGx1Z2luTmFtZT4KCQkJPFBsdWdpblZlcnNpb24+OS4zLjA8L1BsdWdp
+	blZlcnNpb24+CgkJCTxBY3RpdmVTZXR1cD5TRVRVUF9BPC9BY3RpdmVTZXR1cD4KCQkJ
+	PFJlYWRPbmx5PnRydWU8L1JlYWRPbmx5PgoJCTwvUHJlc2V0SGVhZGVyPgoJCTxNZXNz
+	YWdlVG9TaGVsbC8+CgkJPFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0EiIFNldHVwTmFt
+	ZT0iVm9jYWwgQWJzb2x1dGUgTGV2ZWwiPgoJCQk8UGFyYW1ldGVycyBUeXBlPSJSZWFs
+	V29ybGQiPi00MCAtNzAuMTAwMDAwMDAwMDAwMDA4NTI3IDEzMCAqICogKiAqIC04LjU5
+	OTk5OTk5OTk5OTk5OTY0NDcgLTMwIDE3CjcxLjQwMDAwMDAwMDAwMDAxOTg5NSA2MTEu
+	Nzk5OTk5OTk5OTk5OTU0NTMgMTAwIDIxNjQuNjk5OTk5OTk5OTk5ODE4MSAtMzAgKiAw
+	IDE4MDcgMAowIDEgMSAxIDAgKiAqIDAgMAoqIDwvUGFyYW1ldGVycz4KCQk8L1ByZXNl
+	dERhdGE+CgkJPFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0IiPgoJCQk8UGFyYW1ldGVy
+	cyBUeXBlPSJSZWFsV29ybGQiPjAgLTk2IDEzMCAqICogKiAqIDAgLTk2IDE1CjcxLjQw
+	MDAwMDAwMDAwMDAxOTg5NSA2MTEuNzk5OTk5OTk5OTk5OTU0NTMgMTAwIDIxNjQuNjk5
+	OTk5OTk5OTk5ODE4MSAtMjUgKiAwIDE4MDcgMAowIDAgMCAwIDAgKiAqIDAgMAoqIDwv
+	UGFyYW1ldGVycz4KCQk8L1ByZXNldERhdGE+Cgk8L1ByZXNldD4KPC9QcmVzZXRDaHVu
+	a1hNTFRyZWU+CjAgKiA=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAALAAAAAEP6AecAAAABRAaosQAAAAJDKwAAAAAAA0N0SjoAAAAEQs3r
+	LgAAAAVEIBXNAAAABj+AAAAAAAAHP4AAAAAAAAg/gAAAAAAACQAAAAAAAAAKAAAAAA==
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Vocal Absolute Level</string>
+              <key>subtype</key>
+              <integer>1230392403</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Low Level Thresh" id="26297" flags="" value="500.014862060547" parameter="0"/>
+        <Controllable name="Low Level Gain" id="26299" flags="" value="538.635803222656" parameter="1"/>
+        <Controllable name="Gate" id="26301" flags="" value="171.000000000000" parameter="2"/>
+        <Controllable name="Leveler" id="26303" flags="" value="244.289947509766" parameter="3"/>
+        <Controllable name="High Level Thresh" id="26305" flags="" value="102.959335327148" parameter="4"/>
+        <Controllable name="High Level Gain" id="26307" flags="" value="640.340637207031" parameter="5"/>
+        <Controllable name="Leveler On" id="26309" flags="Toggle" value="1.000000000000" parameter="6"/>
+        <Controllable name="Gate On" id="26311" flags="Toggle" value="1.000000000000" parameter="7"/>
+        <Controllable name="High Level Thresh On" id="26313" flags="Toggle" value="1.000000000000" parameter="8"/>
+        <Controllable name="Low Level Thresh On" id="26315" flags="Toggle" value="0.000000000000" parameter="9"/>
+        <Controllable name="ARC Type" id="26317" flags="Toggle" value="0.000000000000" parameter="10"/>
+      </Processor>
+      <Processor id="32583" name="C6 (s)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1127633235-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAAHlwAAAAQAAAABQzZRU3NldEEAAAd3WFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IlByZXNlbmNlIEEiIEdlbmVyaWNUeXBlPSI2
+	TUJDIj4KCQk8UHJlc2V0SGVhZGVyPgoJCQk8UGx1Z2luTmFtZT5DNjwvUGx1Z2luTmFt
+	ZT4KCQkJPFBsdWdpblZlcnNpb24+OS4zLjA8L1BsdWdpblZlcnNpb24+CgkJCTxBY3Rp
+	dmVTZXR1cD5TRVRVUF9BPC9BY3RpdmVTZXR1cD4KCQkJPFJlYWRPbmx5PnRydWU8L1Jl
+	YWRPbmx5PgoJCTwvUHJlc2V0SGVhZGVyPgoJCTxNZXNzYWdlVG9TaGVsbC8+CgkJPFBy
+	ZXNldERhdGEgU2V0dXA9IlNFVFVQX0EiIFNldHVwTmFtZT0iUHJlc2VuY2UgQSI+CgkJ
+	CTxQYXJhbWV0ZXJzIFR5cGU9IlJlYWxXb3JsZCI+NzIgNDAwMCAxMTA3MSAwLjU5OTk5
+	OTk5OTk5OTk5OTk3NzggMCAwIDAgMCAqICoKKiAqICogKiAwIDAgMCAwIDAKMCAwIDAu
+	NSAxNi4wMzAwMDAwMDAwMDAwMDExMzcgNDAuMjcwMDAwMDAwMDAwMDAzMTI2IDAgMCAq
+	IDAKMCAwIDAgMCA0LjUgMCAxLjgwMDAwMDAwMDAwMDAwMDA0NDQgMC41IDE2LjAzMDAw
+	MDAwMDAwMDAwMTEzNwoyNSAwIDAgKiAwIDAgMCAwIDAKMi4yMDAwMDAwMDAwMDAwMDAx
+	Nzc2IDAgMS4zOTk5OTk5OTk5OTk5OTk5MTEyIDAuNSAxNi4wMzAwMDAwMDAwMDAwMDEx
+	MzcgOS45ODAwMDAwMDAwMDAwMDA0MjYzIDAgMCAqCjAgMCAwIDAgMCAwIDAgMCAwLjUK
+	MTYuMDMwMDAwMDAwMDAwMDAxMTM3IDUgMCAwICogMCAwIDAgMAowIDAgLTE0LjA5OTk5
+	OTk5OTk5OTk5OTY0NSAtMjIuMzk5OTk5OTk5OTk5OTk4NTc5IDAuNSAxNi4wMzAwMDAw
+	MDAwMDAwMDExMzcgMzYwIDAgMAoqIDAgMCAwIDAgMCAwIC0xNyA3CjAuNSAwLjUgMzIu
+	MjgwMDAwMDAwMDAwMDAxMTM3IDAgMCAqIDAgODggMC4zNTAwMDAwMDAwMDAwMDAwMzMz
+	MQowIDQuNSA5MjQzIDAuNTUwMDAwMDAwMDAwMDAwMDQ0NDEgMCA0LjUgMCAwIDAKMCAw
+	IDAgMCAwIDAgMCAwIDAKMCAwIDEgMSAwIDwvUGFyYW1ldGVycz4KCQk8L1ByZXNldERh
+	dGE+CgkJPFByZXNldERhdGEgU2V0dXA9IlNFVFVQX0IiIFNldHVwTmFtZT0iTGVhZCBB
+	Ij4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj40NSAyMTk3IDUwMDMgMC40
+	NDAwMDAwMDAwMDAwMDAwMDIyMiAwIDAgMCAwICogKgoqICogKiAqIDAgMCAwIDAgLTUu
+	NDAwMDAwMDAwMDAwMDAwMzU1MwotNjMuODk5OTk5OTk5OTk5OTk4NTc5IC00LjUgMC43
+	NSA2OS44MTk5OTk5OTk5OTk5OTMxNzkgNDAuMjcwMDAwMDAwMDAwMDAzMTI2IDAgMCAq
+	IDAKMCAwIDAgMCAwLjUgLTI1LjYwMDAwMDAwMDAwMDAwMTQyMSAtMy4xMDAwMDAwMDAw
+	MDAwMDAwODg4IDAuNzUgNy41CjI5LjkyMDAwMDAwMDAwMDAwMTcwNSAwIDAgKiAwIDAg
+	MCAwIDAKMC41IC0yMS42MDAwMDAwMDAwMDAwMDE0MjEgLTQuNSAwLjc1IDMwLjA1OTk5
+	OTk5OTk5OTk5ODcyMSAyMC4wMzk5OTk5OTk5OTk5OTkxNDcgMCAwICoKMCAwIDAgMCAw
+	IDEuMTk5OTk5OTk5OTk5OTk5OTU1NiAtMjcuMzAwMDAwMDAwMDAwMDAwNzExIC00LjUg
+	MC43NQoyMCA1IDAgMCAqIDAgMCAwIDAKMCAyLjcwMDAwMDAwMDAwMDAwMDE3NzYgLTU1
+	LjUgMS42OTk5OTk5OTk5OTk5OTk5NTU2IDAuNSAyLjUyOTk5OTk5OTk5OTk5OTgwNDYg
+	NTEuNjQwMDAwMDAwMDAwMDAwNTY4IDAgMAoqIDAgMCAwIDAgMCAtOS4zMDAwMDAwMDAw
+	MDAwMDA3MTA1IC00MS43MDAwMDAwMDAwMDAwMDI4NDIgNi43MDAwMDAwMDAwMDAwMDAx
+	Nzc2CjAuNSAxLjA0MDAwMDAwMDAwMDAwMDAzNTUgMzkuOTkwMDAwMDAwMDAwMDAxOTkg
+	MCAwICogMCAxMDIgMi4xNDk5OTk5OTk5OTk5OTk5MTEyCjAgNC41IDczMzYgMTQuMjUg
+	MCA0LjUgMCAwIDAKMCAwIDAgMCAwIDAgMCAwIDAKMCAwIDEgMSAwIDwvUGFyYW1ldGVy
+	cz4KCQk8L1ByZXNldERhdGE+Cgk8L1ByZXNldD4KPC9QcmVzZXRDaHVua1hNTFRyZWU+
+	Cjk5OTk=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAA2AAAAAEP6AAAAAAABAAAAAAAAAAIAAAAAAAAAA0QmqqsAAAAEQ1OY
+	9gAAAAVEQAAAAAAABkRjP8cAAAAHREBOxQAAAAgAAAAAAAAACQAAAAAAAAAKRE3wAAAA
+	AAtD+gAAAAAADEIYYYYAAAANQ/r+cgAAAA5EGscYAAAADwAAAAAAAAAQQ29j4QAAABEA
+	AAAAAAAAEgAAAAAAAAATRHoAAAAAABRD+gAAAAAAFUQO224AAAAWQ/r+cgAAABdDlwB/
+	AAAAGAAAAAAAAAAZAAAAAAAAABpEegAAAAAAG0QcQAAAAAAcRBmSSQAAAB1D+v5yAAAA
+	HkNo/XEAAAAfAAAAAAAAACAAAAAAAAAAIUR6AAAAAAAiRAxHHAAAACNEFzDDAAAAJEP6
+	/nIAAAAlQsgbZgAAACYAAAAAAAAAJwAAAAAAAAAoRHoAAAAAAClD+gAAAAAAKkQO224A
+	AAArQ/r+cgAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC9EROAAAAAAMEP6AAAAAAAx
+	RDiGGAAAADIAAAAAAAAAM0OG/nIAAAA0Qq+6LQAAADVEXQAs
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>Presence A</string>
+              <key>subtype</key>
+              <integer>1127633235</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Output Gain" id="32473" flags="" value="500.000000000000" parameter="0"/>
+        <Controllable name="Release" id="32475" flags="Toggle" value="0.000000000000" parameter="1"/>
+        <Controllable name="Behavior" id="32477" flags="Toggle" value="0.000000000000" parameter="2"/>
+        <Controllable name="Knee" id="32479" flags="" value="666.666687011719" parameter="3"/>
+        <Controllable name="Low Crossover" id="32481" flags="" value="211.597503662109" parameter="4"/>
+        <Controllable name="Mid Crossover" id="32483" flags="" value="768.000000000000" parameter="5"/>
+        <Controllable name="High Crossover" id="32485" flags="" value="908.996520996094" parameter="6"/>
+        <Controllable name="Crossover Q" id="32487" flags="" value="769.230773925781" parameter="7"/>
+        <Controllable name="Band 1 Solo" id="32489" flags="Toggle" value="0.000000000000" parameter="8"/>
+        <Controllable name="Band 1 Bypass" id="32491" flags="Toggle" value="0.000000000000" parameter="9"/>
+        <Controllable name="Band 1 Threshold" id="32493" flags="" value="823.750000000000" parameter="10"/>
+        <Controllable name="Band 1 Gain" id="32495" flags="" value="500.000000000000" parameter="11"/>
+        <Controllable name="Band 1 Range" id="32497" flags="" value="38.095237731934" parameter="12"/>
+        <Controllable name="Band 1 Attack" id="32499" flags="" value="501.987854003906" parameter="13"/>
+        <Controllable name="Band 1 Release" id="32501" flags="" value="619.110839843750" parameter="14"/>
+        <Controllable name="Band 1 Q" id="32503" flags="" value="0.000000000000" parameter="15"/>
+        <Controllable name="Band 1 Frequency" id="32505" flags="" value="239.390151977539" parameter="16"/>
+        <Controllable name="Band 2 Solo" id="32507" flags="Toggle" value="0.000000000000" parameter="17"/>
+        <Controllable name="Band 2 Bypass" id="32509" flags="Toggle" value="0.000000000000" parameter="18"/>
+        <Controllable name="Band 2 Threshold" id="32511" flags="" value="1000.000000000000" parameter="19"/>
+        <Controllable name="Band 2 Gain" id="32513" flags="" value="500.000000000000" parameter="20"/>
+        <Controllable name="Band 2 Range" id="32515" flags="" value="571.428588867188" parameter="21"/>
+        <Controllable name="Band 2 Attack" id="32517" flags="" value="501.987854003906" parameter="22"/>
+        <Controllable name="Band 2 Release" id="32519" flags="" value="302.003875732422" parameter="23"/>
+        <Controllable name="Band 3 Solo" id="32521" flags="Toggle" value="0.000000000000" parameter="24"/>
+        <Controllable name="Band 3 Bypass" id="32523" flags="Toggle" value="0.000000000000" parameter="25"/>
+        <Controllable name="Band 3 Threshold" id="32525" flags="" value="1000.000000000000" parameter="26"/>
+        <Controllable name="Band 3 Gain" id="32527" flags="" value="625.000000000000" parameter="27"/>
+        <Controllable name="Band 3 Range" id="32529" flags="" value="614.285705566406" parameter="28"/>
+        <Controllable name="Band 3 Attack" id="32531" flags="" value="501.987854003906" parameter="29"/>
+        <Controllable name="Band 3 Release" id="32533" flags="" value="232.990005493164" parameter="30"/>
+        <Controllable name="Band 4 Solo" id="32535" flags="Toggle" value="0.000000000000" parameter="31"/>
+        <Controllable name="Band 4 Bypass" id="32537" flags="Toggle" value="0.000000000000" parameter="32"/>
+        <Controllable name="Band 4 Threshold" id="32539" flags="" value="1000.000000000000" parameter="33"/>
+        <Controllable name="Band 4 Gain" id="32541" flags="" value="561.111083984375" parameter="34"/>
+        <Controllable name="Band 4 Range" id="32543" flags="" value="604.761901855469" parameter="35"/>
+        <Controllable name="Band 4 Attack" id="32545" flags="" value="501.987854003906" parameter="36"/>
+        <Controllable name="Band 4 Release" id="32547" flags="" value="100.053512573242" parameter="37"/>
+        <Controllable name="Band 5 Solo" id="32549" flags="Toggle" value="0.000000000000" parameter="38"/>
+        <Controllable name="Band 5 Bypass" id="32551" flags="Toggle" value="0.000000000000" parameter="39"/>
+        <Controllable name="Band 5 Threshold" id="32553" flags="" value="1000.000000000000" parameter="40"/>
+        <Controllable name="Band 5 Gain" id="32555" flags="" value="500.000000000000" parameter="41"/>
+        <Controllable name="Band 5 Range" id="32557" flags="" value="571.428588867188" parameter="42"/>
+        <Controllable name="Band 5 Attack" id="32559" flags="" value="501.987854003906" parameter="43"/>
+        <Controllable name="Band 5 Release" id="32561" flags="" value="0.000000000000" parameter="44"/>
+        <Controllable name="Band 6 Solo" id="32563" flags="Toggle" value="0.000000000000" parameter="45"/>
+        <Controllable name="Band 6 Bypass" id="32565" flags="Toggle" value="0.000000000000" parameter="46"/>
+        <Controllable name="Band 6 Threshold" id="32567" flags="" value="787.500000000000" parameter="47"/>
+        <Controllable name="Band 6 Gain" id="32569" flags="" value="500.000000000000" parameter="48"/>
+        <Controllable name="Band 6 Range" id="32571" flags="" value="738.095214843750" parameter="49"/>
+        <Controllable name="Band 6 Attack" id="32573" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="Band 6 Release" id="32575" flags="" value="269.987854003906" parameter="51"/>
+        <Controllable name="Band 6 Q" id="32577" flags="" value="87.863624572754" parameter="52"/>
+        <Controllable name="Band 6 Frequency" id="32579" flags="" value="884.002685546875" parameter="53"/>
+      </Processor>
+      <Processor id="32980" name="L2 (s)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1278365011-1802721110" count="1" custom="no">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>Waves_XPst</key>
+              <data>
+	AAACYAAAAAQAAAABTDJNU3NldEEAAAJAWFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
+	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IlZvaWNlQ2FzdGVyIiBHZW5lcmljVHlwZT0i
+	TDIgICI+CgkJPFByZXNldEhlYWRlcj4KCQkJPFBsdWdpbk5hbWU+TDI8L1BsdWdpbk5h
+	bWU+CgkJCTxQbHVnaW5WZXJzaW9uPjkuMy4wPC9QbHVnaW5WZXJzaW9uPgoJCQk8QWN0
+	aXZlU2V0dXA+U0VUVVBfQTwvQWN0aXZlU2V0dXA+CgkJCTxSZWFkT25seT50cnVlPC9S
+	ZWFkT25seT4KCQk8L1ByZXNldEhlYWRlcj4KCQk8TWVzc2FnZVRvU2hlbGwvPgoJCTxQ
+	cmVzZXREYXRhIFNldHVwPSJTRVRVUF9BIiBTZXR1cE5hbWU9IlZvaWNlQ2FzdGVyIj4K
+	CQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4xIC0xMiAtMyAqICogKiAqICog
+	NCAwCjAgMSAyIDEgPC9QYXJhbWV0ZXJzPgoJCTwvUHJlc2V0RGF0YT4KCQk8UHJlc2V0
+	RGF0YSBTZXR1cD0iU0VUVVBfQiI+CgkJCTxQYXJhbWV0ZXJzIFR5cGU9IlJlYWxXb3Js
+	ZCI+MSAwIDAgKiAqICogKiAqIDAgMAowIDEgMiAxIDwvUGFyYW1ldGVycz4KCQk8L1By
+	ZXNldERhdGE+Cgk8L1ByZXNldD4KPC9QcmVzZXRDaHVua1hNTFRyZWU+CmVhZE8=
+	</data>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAAAHAAAAAEQWAAAAAAABRGEAAAAAAAJDyAAAAAAAA0CAAAAAAAAEP4AA
+	AAAAAAVAAAAAAAAABj+AAAA=
+	</data>
+              <key>element-name</key>
+              <dict>
+                <key>1</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Input Bus</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                  <key>0</key>
+                  <string>Main Output Bus</string>
+                </dict>
+              </dict>
+              <key>manufacturer</key>
+              <integer>1802721110</integer>
+              <key>name</key>
+              <string>VoiceCaster</string>
+              <key>subtype</key>
+              <integer>1278365011</integer>
+              <key>type</key>
+              <integer>1635083896</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="Thresh Slider" id="32982" flags="" value="600.000000000000" parameter="0"/>
+        <Controllable name="Ceiling Slider" id="32984" flags="" value="900.000000000000" parameter="1"/>
+        <Controllable name="Release Slider" id="32986" flags="" value="400.000000000000" parameter="2"/>
+        <Controllable name="Quantize" id="32988" flags="" value="4.000000000000" parameter="3"/>
+        <Controllable name="IDR Type" id="32990" flags="" value="1.000000000000" parameter="4"/>
+        <Controllable name="Noise Shaping" id="32992" flags="" value="2.000000000000" parameter="5"/>
+        <Controllable name="ARC" id="32994" flags="Toggle" value="1.000000000000" parameter="6"/>
+      </Processor>
+      <Processor id="26257" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="26231" flags="GainLike" value="0.401641368866"/>
+      </Processor>
+      <Processor id="26259" name="meter-voice bus" active="yes" user-latency="0" type="meter"/>
+      <Processor id="26260" name="voice bus" active="yes" user-latency="0" own-input="yes" own-output="no" output="voice bus" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="26246" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="26250" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="26248" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="26252" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="26254" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Slavable/>
+    </Route>
+  </Routes>
+  <Playlists>
+    <Playlist id="24588" name="Alex.1" type="audio" orig-track-id="24546" frozen="no"/>
+    <Playlist id="24517" name="Fred.1" type="audio" orig-track-id="24475" frozen="no"/>
+    <Playlist id="24420" name="musicThemeNoDrums_r1_session_music 1" type="audio" orig-track-id="24378" frozen="no"/>
+  </Playlists>
+  <UnusedPlaylists>
+    <Playlist id="24105" name="01_IntroRiffNoDrums" type="audio" orig-track-id="24063" frozen="no"/>
+  </UnusedPlaylists>
+  <RouteGroups/>
+  <Click>
+    <IO name="Click" id="23890" direction="Output" default-type="audio" user-latency="0">
+      <Port type="audio" name="Click/audio_out 1">
+        <Connection other="system:playback_1"/>
+      </Port>
+      <Port type="audio" name="Click/audio_out 2">
+        <Connection other="system:playback_2"/>
+      </Port>
+    </IO>
+    <Processor id="23891" name="Amp" active="yes" user-latency="0" type="amp">
+      <Controllable name="gaincontrol" id="23889" flags="GainLike" value="1.000000000000"/>
+    </Processor>
+  </Click>
+  <LTC-In>
+    <IO name="LTC In" id="44" direction="Input" default-type="audio" user-latency="0">
+      <Port type="audio" name="LTC-in">
+        <Connection other="system:capture_1"/>
+      </Port>
+    </IO>
+  </LTC-In>
+  <LTC-Out>
+    <IO name="LTC Out" id="45" direction="Output" default-type="audio" user-latency="0">
+      <Port type="audio" name="LTC-out"/>
+    </IO>
+  </LTC-Out>
+  <Speakers>
+    <Speaker azimuth="240" elevation="0" distance="1"/>
+    <Speaker azimuth="120" elevation="0" distance="1"/>
+  </Speakers>
+  <TempoMap>
+    <Tempo pulse="0.000000" frame="0" beats-per-minute="120.000000" note-type="4.000000" movable="no" active="yes" tempo-type="Ramp" lock-style="AudioTime" locked-to-meter="no"/>
+    <Meter pulse="0.000000" bbt="1|1|0" beat="0.000000" note-type="4.000000" frame="0" lock-style="AudioTime" divisions-per-bar="4.000000" movable="no"/>
+  </TempoMap>
+  <ControlProtocols>
+    <Protocol name="PreSonus FaderPort" active="no"/>
+    <Protocol name="Generic MIDI" active="no"/>
+    <Protocol name="Mackie" active="no"/>
+    <Protocol name="Open Sound Control (OSC)" active="no"/>
+    <Protocol name="Ableton Push 2" active="no"/>
+  </ControlProtocols>
+  <Extra>
+    <StemExportProfile>
+      <ExportTimespan format="Timecode">
+        <Range id="26366"/>
+      </ExportTimespan>
+      <ExportChannelConfiguration split="false" channels="2">
+        <Channel number="1">
+          <Port name="voice bus/audio_out 1"/>
+        </Channel>
+        <Channel number="2">
+          <Port name="voice bus/audio_out 2"/>
+        </Channel>
+      </ExportChannelConfiguration>
+      <ExportFormat id="7bb867db-67b0-4aaf-9987-38c31e15052e"/>
+      <ExportFilename>
+        <Folder relative="true" path="/export"/>
+        <Field name="label" enabled="true" value="1_superLoud"/>
+        <Field name="session" enabled="false"/>
+        <Field name="timespan" enabled="false"/>
+        <Field name="revision" enabled="true"/>
+        <Field name="time" enabled="false" value="T_None"/>
+        <Field name="date" enabled="false" value="D_None"/>
+      </ExportFilename>
+    </StemExportProfile>
+    <ExportRevision revision="2"/>
+    <ExportProfile>
+      <ExportTimespan format="Timecode">
+        <Range id="26366"/>
+      </ExportTimespan>
+      <ExportChannelConfiguration split="false" channels="2">
+        <Channel number="1">
+          <Port name="Master/audio_out 1"/>
+        </Channel>
+        <Channel number="2">
+          <Port name="Master/audio_out 2"/>
+        </Channel>
+      </ExportChannelConfiguration>
+      <ExportFormat id="7bb867db-67b0-4aaf-9987-38c31e15052e"/>
+      <ExportFilename>
+        <Folder relative="true" path="/export"/>
+        <Field name="label" enabled="true" value="3_voiceCaster_presence"/>
+        <Field name="session" enabled="false"/>
+        <Field name="timespan" enabled="false"/>
+        <Field name="revision" enabled="true"/>
+        <Field name="time" enabled="false" value="T_None"/>
+        <Field name="date" enabled="false" value="D_None"/>
+      </ExportFilename>
+    </ExportProfile>
+    <UI>
+      <Window name="key-editor" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="session-options-editor" visible="no" x-off="1787" y-off="281" x-size="634" y-size="330"/>
+      <Window name="speaker-config" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="about" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="add-routes" visible="no" x-off="-1" y-off="-1" x-size="308" y-size="306"/>
+      <Window name="add-video" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="inspector" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="audio-midi-setup" visible="no" x-off="730" y-off="1453" x-size="503" y-size="394"/>
+      <Window name="video-export" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="script-manager" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="bundle-manager" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="locations" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="big-clock" visible="no" x-off="2346" y-off="459" x-size="401" y-size="71"/>
+      <Window name="audio-connection-manager" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="midi-connection-manager" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-24378" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-23893" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-24475" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-24546" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-26227" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-24378-24409" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24378-24408" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24378-24410" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24378-24411" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24378-24427" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="PM-24409-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24408-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24410-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24411-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24427-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-23929-23952" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23929-23957" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23929-23948" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23929-23950" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23929-23951" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="PM-23952-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23957-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23948-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23950-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23951-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-23893-23924" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23893-23923" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23893-27872" visible="no" x-off="370" y-off="558" x-size="594" y-size="449" custom-ui="yes"/>
+      <Window name="P-23893-23925" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23893-23926" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="PM-23924-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23923-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-27872-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23925-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-23926-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-24475-24506" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24475-26622" visible="no" x-off="526" y-off="1200" x-size="590" y-size="165" custom-ui="yes"/>
+      <Window name="P-24475-26436" visible="no" x-off="49" y-off="0" x-size="433" y-size="416" custom-ui="yes"/>
+      <Window name="P-24475-24505" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24475-24507" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24475-24508" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24475-24522" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="PM-24506-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26622-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26436-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24505-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24507-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24508-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24522-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-24546-24577" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24546-26613" visible="no" x-off="1034" y-off="1674" x-size="590" y-size="453" custom-ui="yes"/>
+      <Window name="P-24546-26480" visible="no" x-off="49" y-off="0" x-size="433" y-size="416" custom-ui="yes"/>
+      <Window name="P-24546-24576" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24546-24578" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24546-24579" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-24546-24593" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="PM-24577-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26613-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26480-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24576-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24578-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24579-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-24593-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-26227-26263" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-26227-26258" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-26227-26295" visible="no" x-off="391" y-off="1435" x-size="687" y-size="474" custom-ui="yes"/>
+      <Window name="P-26227-26257" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-26227-26259" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-26227-26260" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-26227-26268" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="PM-26263-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26258-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26295-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26257-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26259-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26260-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-26268-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-24475-32170" visible="no" x-off="648" y-off="1200" x-size="640" y-size="600" custom-ui="yes"/>
+      <Window name="PM-32170-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-24546-32229" visible="no" x-off="648" y-off="1200" x-size="640" y-size="600" custom-ui="yes"/>
+      <Window name="PM-32229-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-26227-32583" visible="no" x-off="584" y-off="1200" x-size="768" y-size="505" custom-ui="yes"/>
+      <Window name="PM-32583-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-24378-32783" visible="no" x-off="693" y-off="1649" x-size="590" y-size="165" custom-ui="yes"/>
+      <Window name="PM-32783-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-26227-32980" visible="no" x-off="708" y-off="1200" x-size="520" y-size="342" custom-ui="yes"/>
+      <Window name="PM-32980-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-23893-32999" visible="no" x-off="714" y-off="1200" x-size="509" y-size="574" custom-ui="yes"/>
+      <Window name="PM-32999-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-23893-33074" visible="no" x-off="708" y-off="1200" x-size="520" y-size="342" custom-ui="yes"/>
+      <Window name="PM-33074-" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <GUIObjectState>
+        <Object id="strip 28" visible="1">
+          <Object id="processor 47"/>
+        </Object>
+        <Object id="automation 148 10/0/0" height="64" visible="0"/>
+        <Object id="strip 148" visible="1" strip-width="Wide">
+          <Object id="processor 167"/>
+          <Object id="processor 17965"/>
+          <Object id="processor 18249"/>
+          <Object id="processor 18324"/>
+          <Object id="processor 18381"/>
+        </Object>
+        <Object id="strip 285" visible="1" strip-width="Wide">
+          <Object id="processor 304"/>
+        </Object>
+        <Object id="automation 285 10/0/0" height="64" visible="0"/>
+        <Object id="strip 418" visible="0" strip-width="Wide">
+          <Object id="processor 437"/>
+        </Object>
+        <Object id="automation 418 10/0/0" height="79" visible="0"/>
+        <Object id="strip 636" visible="0" strip-width="Wide">
+          <Object id="processor 655"/>
+        </Object>
+        <Object id="automation 636 10/0/0" height="132" visible="0"/>
+        <Object id="strip 2039" visible="0" strip-width="Wide">
+          <Object id="processor 2058"/>
+        </Object>
+        <Object id="automation 2039 10/0/0" height="288" visible="0"/>
+        <Object id="strip 3111" visible="0" strip-width="Wide">
+          <Object id="processor 3130"/>
+        </Object>
+        <Object id="automation 3111 10/0/0" height="520" visible="0"/>
+        <Object id="strip 4879" visible="1" strip-width="Wide">
+          <Object id="processor 4898"/>
+          <Object id="processor 9107"/>
+          <Object id="processor 9195"/>
+          <Object id="processor 9269"/>
+          <Object id="processor 9325"/>
+        </Object>
+        <Object id="automation 4879 10/0/0" height="64" visible="0"/>
+        <Object id="strip 7624" visible="1" strip-width="Wide">
+          <Object id="processor 7643"/>
+        </Object>
+        <Object id="automation 7624 10/0/0" height="64" visible="0"/>
+        <Object id="strip 8282" visible="1" strip-width="Wide">
+          <Object id="processor 8301"/>
+        </Object>
+        <Object id="automation 8282 10/0/0" height="64" visible="0"/>
+        <Object id="strip 10064" visible="1" strip-width="Wide">
+          <Object id="processor 10083"/>
+        </Object>
+        <Object id="automation 10064 10/0/0" height="64" visible="0"/>
+        <Object id="automation 4879 12/0/0" height="64" visible="0"/>
+        <Object id="automation 7624 12/0/0" height="64" visible="0"/>
+        <Object id="automation 8282 12/0/0" height="64" visible="0"/>
+        <Object id="strip 13829" visible="0" strip-width="Wide">
+          <Object id="processor 13859"/>
+        </Object>
+        <Object id="strip 13900" visible="0" strip-width="Wide">
+          <Object id="processor 13930"/>
+        </Object>
+        <Object id="strip 13948" visible="0" strip-width="Wide">
+          <Object id="processor 13978"/>
+        </Object>
+        <Object id="strip 14544" visible="1" strip-width="Wide">
+          <Object id="processor 14574"/>
+        </Object>
+        <Object id="strip 15015" visible="1" strip-width="Wide">
+          <Object id="processor 15045"/>
+          <Object id="processor 17873"/>
+          <Object id="processor 17907"/>
+          <Object id="processor 18156"/>
+          <Object id="processor 18223"/>
+          <Object id="processor 18353"/>
+          <Object id="processor 18363"/>
+          <Object id="processor 18401"/>
+        </Object>
+        <Object id="strip 15328" visible="1" strip-width="Wide">
+          <Object id="processor 15358"/>
+        </Object>
+        <Object id="strip 16595" visible="1" strip-width="Wide">
+          <Object id="processor 16625"/>
+          <Object id="processor 16691"/>
+          <Object id="processor 16706"/>
+          <Object id="processor 16727"/>
+          <Object id="processor 16747"/>
+          <Object id="processor 16798"/>
+          <Object id="processor 16827"/>
+          <Object id="processor 16856"/>
+        </Object>
+        <Object id="automation 16595 12/0/0" height="64" visible="0"/>
+        <Object id="strip 16937" visible="1" strip-width="Wide">
+          <Object id="processor 16967"/>
+          <Object id="processor 17031"/>
+          <Object id="processor 17069"/>
+        </Object>
+        <Object id="strip 17098" visible="1" strip-width="Wide">
+          <Object id="processor 17128"/>
+        </Object>
+        <Object id="rtav 23893" height="64" visible="1"/>
+        <Object id="automation 23897" height="64" visible="0"/>
+        <Object id="automation 23899" height="64" visible="0"/>
+        <Object id="automation 23893 12/0/0" height="64" visible="0"/>
+        <Object id="automation 23912" height="64" visible="0"/>
+        <Object id="automation 23916" height="64" visible="0"/>
+        <Object id="strip 23893" visible="1" strip-width="Wide">
+          <Object id="processor 23923"/>
+          <Object id="processor 24917"/>
+          <Object id="processor 27794"/>
+          <Object id="processor 27872"/>
+          <Object id="processor 32335"/>
+          <Object id="processor 32471"/>
+          <Object id="processor 32696"/>
+          <Object id="processor 32764"/>
+          <Object id="processor 32840"/>
+          <Object id="processor 23925"/>
+          <Object id="processor 32953"/>
+          <Object id="processor 32999"/>
+          <Object id="processor 33074"/>
+        </Object>
+        <Object id="strip 24063" visible="1" strip-width="Wide">
+          <Object id="processor 24093"/>
+        </Object>
+        <Object id="strip 24378" visible="1" strip-width="Wide">
+          <Object id="processor 24408"/>
+          <Object id="processor 32783"/>
+        </Object>
+        <Object id="rtav 24378" height="129" visible="1"/>
+        <Object id="automation 24382" height="82" visible="1"/>
+        <Object id="automation 24384" height="64" visible="0"/>
+        <Object id="automation 24378 12/0/0" height="64" visible="0"/>
+        <Object id="automation 24397" height="64" visible="0"/>
+        <Object id="automation 24401" height="64" visible="0"/>
+        <Object id="strip 24475" visible="1" strip-width="Wide">
+          <Object id="processor 24505"/>
+          <Object id="processor 26374"/>
+          <Object id="processor 26401"/>
+          <Object id="processor 26436"/>
+          <Object id="processor 26622"/>
+          <Object id="processor 27005"/>
+          <Object id="processor 27097"/>
+          <Object id="processor 27178"/>
+          <Object id="processor 27226"/>
+          <Object id="processor 27309"/>
+          <Object id="processor 27353"/>
+          <Object id="processor 27384"/>
+          <Object id="processor 27403"/>
+          <Object id="processor 27482"/>
+          <Object id="processor 27541"/>
+          <Object id="processor 31742"/>
+          <Object id="processor 31815"/>
+          <Object id="processor 31840"/>
+          <Object id="processor 31879"/>
+          <Object id="processor 31983"/>
+          <Object id="processor 32000"/>
+          <Object id="processor 32063"/>
+          <Object id="processor 32080"/>
+          <Object id="processor 32145"/>
+          <Object id="processor 32150"/>
+          <Object id="processor 32157"/>
+          <Object id="processor 32170"/>
+        </Object>
+        <Object id="rtav 24475" height="108" visible="1"/>
+        <Object id="automation 24479" height="64" visible="0"/>
+        <Object id="automation 24481" height="64" visible="0"/>
+        <Object id="automation 24475 12/0/0" height="64" visible="0"/>
+        <Object id="automation 24494" height="64" visible="0"/>
+        <Object id="strip 24546" visible="1" strip-width="Wide">
+          <Object id="processor 24576"/>
+          <Object id="processor 26480"/>
+          <Object id="processor 26613"/>
+          <Object id="processor 29209"/>
+          <Object id="processor 29239"/>
+          <Object id="processor 29460"/>
+          <Object id="processor 32229"/>
+        </Object>
+        <Object id="rtav 24546" height="89" visible="1"/>
+        <Object id="automation 24550" height="64" visible="0"/>
+        <Object id="automation 24552" height="64" visible="0"/>
+        <Object id="automation 24546 12/0/0" height="64" visible="0"/>
+        <Object id="automation 24565" height="64" visible="0"/>
+        <Object id="strip 26154" strip-width="Wide" visible="1">
+          <Object id="processor 26184"/>
+        </Object>
+        <Object id="rtav 26227" height="64" visible="1"/>
+        <Object id="automation 26231" height="64" visible="0"/>
+        <Object id="automation 26233" height="64" visible="0"/>
+        <Object id="automation 26227 12/0/0" height="64" visible="0"/>
+        <Object id="automation 26246" height="64" visible="0"/>
+        <Object id="automation 26250" height="64" visible="0"/>
+        <Object id="strip 26227" strip-width="Wide" visible="1">
+          <Object id="processor 26257"/>
+          <Object id="processor 26295"/>
+          <Object id="processor 26526"/>
+          <Object id="processor 26548"/>
+          <Object id="processor 26565"/>
+          <Object id="processor 26920"/>
+          <Object id="processor 26937"/>
+          <Object id="processor 27563"/>
+          <Object id="processor 27582"/>
+          <Object id="processor 32583"/>
+          <Object id="processor 32820"/>
+          <Object id="processor 32872"/>
+          <Object id="processor 32980"/>
+        </Object>
+        <Object id="automation 27543" height="64" visible="0"/>
+        <Object id="automation 26438" height="64" visible="0"/>
+        <Object id="automation 26440" height="64" visible="0"/>
+        <Object id="automation 26442" height="64" visible="0"/>
+        <Object id="automation 26444" height="64" visible="0"/>
+        <Object id="automation 26446" height="64" visible="0"/>
+        <Object id="automation 26448" height="64" visible="0"/>
+        <Object id="automation 26450" height="64" visible="0"/>
+        <Object id="automation 26452" height="64" visible="0"/>
+        <Object id="automation 26454" height="64" visible="0"/>
+        <Object id="automation 26456" height="64" visible="0"/>
+        <Object id="automation 26458" height="64" visible="0"/>
+        <Object id="automation 26460" height="64" visible="0"/>
+        <Object id="automation 26462" height="64" visible="0"/>
+        <Object id="automation 26464" height="64" visible="0"/>
+        <Object id="automation 26466" height="64" visible="0"/>
+        <Object id="automation 26468" height="64" visible="0"/>
+        <Object id="automation 26470" height="64" visible="0"/>
+        <Object id="automation 26472" height="64" visible="0"/>
+        <Object id="automation 26474" height="64" visible="0"/>
+        <Object id="automation 26476" height="64" visible="0"/>
+        <Object id="automation 26624" height="64" visible="0"/>
+        <Object id="automation 27311" height="64" visible="0"/>
+        <Object id="automation 27313" height="64" visible="0"/>
+        <Object id="automation 27315" height="64" visible="0"/>
+        <Object id="automation 27317" height="64" visible="0"/>
+        <Object id="automation 27319" height="64" visible="0"/>
+        <Object id="automation 27321" height="64" visible="0"/>
+        <Object id="automation 27323" height="64" visible="0"/>
+        <Object id="automation 27325" height="64" visible="0"/>
+        <Object id="automation 27327" height="64" visible="0"/>
+        <Object id="automation 27329" height="64" visible="0"/>
+        <Object id="automation 27331" height="64" visible="0"/>
+        <Object id="automation 27333" height="64" visible="0"/>
+        <Object id="automation 27335" height="64" visible="0"/>
+        <Object id="automation 27337" height="64" visible="0"/>
+        <Object id="automation 27339" height="64" visible="0"/>
+        <Object id="automation 27341" height="64" visible="0"/>
+        <Object id="automation 27343" height="64" visible="0"/>
+        <Object id="automation 27345" height="64" visible="0"/>
+        <Object id="automation 27545" height="64" visible="0"/>
+        <Object id="automation 27549" height="64" visible="0"/>
+        <Object id="automation 27551" height="64" visible="0"/>
+        <Object id="automation 27553" height="64" visible="0"/>
+      </GUIObjectState>
+    </UI>
+    <Videomonitor active="no"/>
+  </Extra>
+  <Script lua="Lua 5.3">c2NyaXB0cyA9IHt9IA==</Script>
+</Session>

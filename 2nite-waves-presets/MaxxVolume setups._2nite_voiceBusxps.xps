@@ -1,0 +1,16 @@
+<PresetXMLTree version="2">
+	<Preset Name="lev-28_highThresh-4" GenericType="IVOL">
+		<PresetHeader>
+			<PluginName>MaxxVolume</PluginName>
+			<PluginVersion>9.3.0</PluginVersion>
+			<ReadOnly>false</ReadOnly>
+		</PresetHeader>
+		<MessageToShell/>
+		<PresetData Setup="CURRENT">
+			<Parameters Type="RealWorld">-4 -96 130 * * * * 0 -40.200000000000002842 10.100000000000001421
+71.400000000000019895 611.79999999999995453 100 2164.6999999999998181 -28 * 0 1807 0
+0 1 1 0 0 * * 0 0
+* </Parameters>
+		</PresetData>
+	</Preset>
+</PresetXMLTree>

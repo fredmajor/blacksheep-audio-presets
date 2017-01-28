@@ -1,0 +1,19 @@
+<PresetXMLTree version="2">
+	<Preset Name="kz_voip" GenericType="SLCH">
+		<PresetHeader>
+			<PluginName>SSLChannel</PluginName>
+			<PluginVersion>9.3.40</PluginVersion>
+			<ReadOnly>false</ReadOnly>
+		</PresetHeader>
+		<MessageToShell/>
+		<PresetData Setup="CURRENT">
+			<Parameters Type="RealWorld">-14.199999999999999289 2.2000000000000001776 1 0.10000000000000000555 * -30 20.100000000000001421 1 1 0.10000000000000000555
+* 0 0 0 0 442 0 0.5 2.5
+0 3.5 1.5 0 0 8 0 0 100
+30 0 5.5 1 * * 0 * *
+7 -18 0 0 * * * * *
+* -18 -18 -18 -18 -18 -18 -18 -18
+0 0 </Parameters>
+		</PresetData>
+	</Preset>
+</PresetXMLTree>

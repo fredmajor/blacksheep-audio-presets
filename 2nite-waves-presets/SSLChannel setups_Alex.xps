@@ -1,0 +1,19 @@
+<PresetXMLTree version="2">
+	<Preset Name="shure_Alex" GenericType="SLCH">
+		<PresetHeader>
+			<PluginName>SSLChannel</PluginName>
+			<PluginVersion>9.3.40</PluginVersion>
+			<ReadOnly>false</ReadOnly>
+		</PresetHeader>
+		<MessageToShell/>
+		<PresetData Setup="CURRENT">
+			<Parameters Type="RealWorld">-13 2.2999999999999998224 1 0.10000000000000000555 * -30 15.300000000000000711 1 1 0.11000000000000000056
+* 0 0 0 0 50 0 0.5 2.5
+0 3.5 1.5 0 3.2000000000000001776 8 0 0 119
+30 0 3 1 * * 0 * *
+7 -18 0 0 * * * * *
+* -18 -18 -18 -18 -18 -18 -18 -18
+0 0 </Parameters>
+		</PresetData>
+	</Preset>
+</PresetXMLTree>
